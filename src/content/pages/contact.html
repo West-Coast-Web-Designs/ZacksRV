@@ -16,6 +16,9 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
+
+
+
     <!-- ============================================ -->
     <!--                    LANDING                   -->
     <!-- ============================================ -->
@@ -25,16 +28,16 @@ eleventyNavigation:
         <picture>
             <source
                 media="(max-width: 600px)"
-                srcset="/assets/images/cabinets2-m.jpg"
+                srcset="/assets/images/RV 1-m.jpg"
             />
             <source
                 media="(min-width: 601px)"
-                srcset="/assets/images/cabinets2.jpg"
+                srcset="/assets/images/RV 1.jpg"
             />
             <img
                 aria-hidden="true"
                 decoding="async"
-                src="/assets/images/cabinets2.jpg"
+                src="/assets/images/RV 1.jpg"
                 alt="kitchen cabinets"
                 loading="eager"
                 width="2500"
@@ -42,74 +45,50 @@ eleventyNavigation:
             />
         </picture>
     </section>
-
+                                
     <!-- ============================================ -->
     <!--                Contact Form                  -->
     <!-- ============================================ -->
 
     <section id="cs-contact">
         <div class="cs-container">
-            <form id="cs-form" name="Contact Form" method="post">
+            <form id="cs-form" name="RV Service Request" method="post">
                 <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
+                    <span class="cs-topper">Schedule Service</span>
+                    <h2 class="cs-title">Request RV Service</h2>
                     <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Ridiculus elementum ullamcorper ipsum porttitor aliquam.
-                        Id magna urna ultrices odio pulvinar. Sed ut.
+                        Need expert RV maintenance or repairs? Fill out our service request form 
+                        and we'll get back to you within 24 hours to schedule your appointment.
                     </p>
                 </div>
                 <label>
                     Name
-                    <input
-                        required
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Name"
-                    />
+                    <input required type="text" id="name" name="name" placeholder="Your Name"/>
                 </label>
                 <label>
-                    Email
-                    <input
-                        required
-                        type="text"
-                        id="email"
-                        name="email"
-                        placeholder="Email"
-                    />
+                    RV Make/Model
+                    <input required type="text" id="rv-model" name="rv-model" placeholder="e.g., Winnebago Vista 2020"/>
                 </label>
                 <label>
-                    Phone
-                    <input
-                        required
-                        type="text"
-                        id="phone"
-                        name="phone"
-                        placeholder="Phone"
-                    />
-                </label>
-                <label>
-                    How Did You Find Us
-                    <input
-                        type="text"
-                        id="find"
-                        name="find-us"
-                        placeholder="How did you find us?"
-                    />
+                    Service Needed
+                    <select required id="service-type" name="service-type">
+                        <option value="">Select Service Type</option>
+                        <option value="General">General Repair</option>
+                        <option value="Slide Out">Slide Out Repair</option>
+                        <option value="Winterization">Winterization</option>
+                        <option value="Appliance Services">Appliance Services</option>
+                        <option value="electrical">Electrical Systems</option>
+                        <option value="maintenance">Routine Maintenance</option>
+                        <option value="emergency">Emergency Repair</option>
+                    </select>
                 </label>
                 <label class="cs-label-message">
-                    Message
-                    <textarea
-                        required
-                        name="Message"
-                        id="message"
-                        placeholder="Write message..."
-                    ></textarea>
+                    Service Details
+                    <textarea required name="Message" id="message" 
+                        placeholder="Please describe the service needed or issues you're experiencing...">
+                    </textarea>
                 </label>
-                <button class="cs-button-solid" type="submit">
-                    Submit Message
-                </button>
+                <button class="cs-button-solid" type="submit">Submit Service Request</button>
             </form>
             <div class="cs-right-section">
                 <!--Email-->
@@ -140,12 +119,12 @@ eleventyNavigation:
                 <picture class="cs-bg-picture">
                     <source
                         media="(min-width: 601px)"
-                        srcset="/assets/images/skyscraper.jpg"
+                        srcset="/assets/images/surf.jpg"
                     />
                     <img
                         aria-hidden="true"
                         decoding="async"
-                        src="/assets/images/skyscraper.jpg"
+                        src="/assets/images/surf.jpg"
                         alt="building"
                         loading="lazy"
                         width="2500"

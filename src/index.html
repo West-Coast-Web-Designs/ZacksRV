@@ -1,12 +1,12 @@
 ---
-title: "Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO"
-description: "Meta description for the page"
-preloadImg: "/assets/images/landing.jpg"
+title: "Zack's RV Repair"
+description: "Professional RV repair, maintenance, and upgrade services by certified technicians. Serving all makes and models of recreational vehicles."
+preloadImg: "/assets/images/logo-small.jpg"
 permalink: "/"
-tags: "sitemap" # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
+tags: "sitemap"
 eleventyNavigation:
     key: Home
-    order: 100
+    order: 1
 ---
 
 {% extends "layouts/base.html" %}
@@ -81,49 +81,143 @@ eleventyNavigation:
     <section id="hero">
         <div class="cs-container">
             <div class="cs-flex-group">
-                <span class="cs-topper">mountain hiking society</span>
-                <h1 class="cs-title">Explore the World with Exciting People</h1>
+                <span class="cs-topper">Professional RV Maintenance & Repair</span>
+                <h1 class="cs-title">Expert RV Service You Can Trust</h1>
                 <p class="cs-text">
-                    Tincidunt lobortis feugiat vivamus at augue eget arcu dictum
-                    varius. Nibh tortor id aliquet lectus proin nibh
-                    condimentum.
+                    Your trusted partner in RV maintenance and repairs. With years of experience, 
+                    certified to keep your home on wheels running smoothly. From routine 
+                    maintenance to complex repairs, we handle it all.
                 </p>
-                <a href="/about" class="cs-button-solid">Explore More</a>
-                <a href="/contact" class="cs-button-transparent">
-                    <img
-                        class="cs-img"
-                        loading="lazy"
-                        decoding="async"
-                        src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-                        alt="play icon"
-                        width="17"
-                        height="17"
-                    />
-                    Get in Touch
-                </a>
+                <a href="/services" class="cs-button-solid">Our Services</a>
+                <a href="/contact" class="cs-button-transparent">Schedule Service</a>
             </div>
         </div>
 
         <!-- Background Image -->
         <picture class="cs-picture">
             <source
-                media="(max-width: 600px)"
-                srcset="/assets/images/landing-m.webp"
+                media="(max-width: 50px)"
+                srcset="/assets/images/Road-m.jpg"
             />
             <source
-                media="(min-width: 601px)"
-                srcset="/assets/images/landing.jpg"
+                media="(min-width: 51px)"
+                srcset="/assets/images/Road.jpg"
             />
             <img
                 aria-hidden="true"
                 decoding="async"
-                src="/assets/images/landing.jpg"
-                alt="new home"
-                width="2500"
-                height="1667"
+                src="/assets/images/Road.jpg"
+                alt="RV on beach"
+                width="1800"
+                height="1200"
                 loading="eager"
             />
         </picture>
+    </section>
+    <!-- ============================================ -->
+    <!--                    Services                  -->
+    <!-- ============================================ -->
+
+    <section id="services-1354">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Our Services</span>
+                <h2 class="cs-title">Complete RV Care & Maintenance Solutions</h2>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <a href="/services" class="cs-link">
+                        <h3 class="cs-h3"><span class="cs-span">Slide Out</span> Repairs</h3>
+                    </a>
+                    <picture class="cs-background">
+                        <source media="(max-width: 600px)" srcset="/assets/images/Slide.jpeg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/Slide.jpeg">
+                        <img decoding="async" src="/assets/images/Slide.jpeg" alt="RV engine maintenance" width="305" height="305" aria-hidden="true">
+                    </picture>
+                </li>
+                <li class="cs-item">
+                    <a href="/services" class="cs-link">
+                        <h3 class="cs-h3"><span class="cs-span">Appliance</span> Repairs</h3>
+                    </a>
+                    <picture class="cs-background">
+                        <source media="(max-width: 600px)" srcset="/assets/images/Appliance.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/Appliance.jpg">
+                        <img decoding="async" src="/assets/images/Appliance.jpg" alt="RV interior systems" width="305" height="305" aria-hidden="true">
+                    </picture>
+                </li>
+                <li class="cs-item">
+                    <a href="/services" class="cs-link">
+                        <h3 class="cs-h3"><span class="cs-span">Tank</span> Cleaning</h3>
+                    </a>
+                    <picture class="cs-background">
+                        <source media="(max-width: 600px)" srcset="/assets/images/Tank.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/Tank.jpg">
+                        <img decoding="async" src="/assets/images/Tank.jpg" alt="RV electrical systems" width="305" height="305" aria-hidden="true">
+                    </picture>
+                </li>
+                <li class="cs-item">
+                    <a href="/services" class="cs-link">
+                        <h3 class="cs-h3"><span class="cs-span">Exterior</span> Maintenance</h3>
+                    </a>
+                    <picture class="cs-background">
+                        <source media="(max-width: 600px)" srcset="/assets/images/EXT.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/EXT.jpg">
+                        <img decoding="async" src="/assets/images/EXT.jpg" alt="RV exterior maintenance" width="305" height="305" aria-hidden="true">
+                    </picture>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                About Us                      -->
+    <!-- ============================================ -->
+
+    <section id="about-us" class="section">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">About Us</span>
+                <h2 class="cs-title">Your Certified RV Technicians</h2>
+                <div class="cs-flex-wrapper">
+                    <div class="cs-left">
+                        <p class="cs-text">
+                            With decades of experience in RV repair and maintenance, our team of certified 
+                            technicians brings expertise and dedication to every job. We understand that your RV is 
+                            more than just a vehicle – it's your home away from home.
+                        </p>
+                        <p class="cs-text">
+                            That's why we treat every repair and maintenance task with the utmost care and attention 
+                            to detail. Our commitment to excellence ensures your RV receives the highest quality service 
+                            every time.
+                        </p>
+                        <a href="/about" class="cs-button-solid">Learn More About Us</a>
+                    </div>
+                    <div class="cs-right">
+                        <div class="cs-stats-group">
+                            <div class="cs-stat-box">
+                                <span class="cs-number">20+</span>
+                                <span class="cs-stat-text">Years Experience</span>
+                                <p class="cs-stat-desc">Serving RV owners since 2003</p>
+                            </div>
+                            <div class="cs-stat-box">
+                                <span class="cs-number">1000+</span>
+                                <span class="cs-stat-text">RVs Serviced</span>
+                                <p class="cs-stat-desc">Trusted by countless owners</p>
+                            </div>
+                            <div class="cs-stat-box">
+                                <span class="cs-number">100%</span>
+                                <span class="cs-stat-text">Satisfaction</span>
+                                <p class="cs-stat-desc">Customer satisfaction guaranteed</p>
+                            </div>
+                        </div>
+                        <picture class="cs-picture">
+                            <source media="(max-width: 600px)" srcset="/assets/images/about-m.jpg">
+                            <source media="(min-width: 601px)" srcset="/assets/images/about.jpg">
+                            <img aria-hidden="true" decoding="async" src="/assets/images/about.jpg" alt="RV technician at work" loading="lazy" width="400" height="400">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- ============================================ -->
@@ -131,22 +225,20 @@ eleventyNavigation:
     <!-- ============================================ -->
 
     <section id="services" class="services">
-        <!-- Get Icons From flaticon.com -->
         <div class="card">
             <picture>
                 <img
                     aria-hidden="true"
                     decoding="async"
                     src="/assets/svgs/service1.svg"
-                    alt="appliance"
+                    alt="RV Maintenance"
                     width="48"
                     height="48"
                 />
             </picture>
-            <h2>Service 1</h2>
+            <h2>Preventive Maintenance</h2>
             <p>
-                Talk about the service with keywords people will be searching
-                for it by. Keep it 1-2 sentences.
+                Regular maintenance checks and services to keep your RV in optimal condition and prevent costly repairs.
             </p>
         </div>
         <div class="card">
@@ -155,15 +247,14 @@ eleventyNavigation:
                     aria-hidden="true"
                     decoding="async"
                     src="/assets/svgs/service2.svg"
-                    alt="appliance"
+                    alt="RV Systems"
                     width="48"
                     height="48"
                 />
             </picture>
-            <h2>Service 2</h2>
+            <h2>System Upgrades</h2>
             <p>
-                Talk about the service with keywords people will be searching
-                for it by. Keep it 1-2 sentences.
+                Modern upgrades for electrical, plumbing, and comfort systems to enhance your RV experience.
             </p>
         </div>
         <div class="card">
@@ -172,393 +263,29 @@ eleventyNavigation:
                     aria-hidden="true"
                     decoding="async"
                     src="/assets/svgs/service3.svg"
-                    alt="appliance"
+                    alt="RV Repairs"
                     width="48"
                     height="48"
                 />
             </picture>
-            <h2>Service 3</h2>
+            <h2>Emergency Repairs</h2>
             <p>
-                Talk about the service with keywords people will be searching
-                for it by. Keep it 1-2 sentences.
+                Fast, reliable repair services for all RV systems and components when you need them most.
             </p>
         </div>
     </section>
 
     <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="/assets/images/cabinets2-m.jpg"
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="/assets/images/cabinets2.jpg"
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="/assets/images/cabinets2.jpg"
-                        alt="cabinets"
-                        loading="lazy"
-                        width="400"
-                        height="563"
-                    />
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="/assets/images/construction-m.jpg"
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="/assets/images/construction.jpg"
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="/assets/images/construction.jpg"
-                        alt="house"
-                        loading="lazy"
-                        width="400"
-                        height="563"
-                    />
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent
-                    Class officelan nonatoureanor mauris laoreet, iaculis libero
-                    quis. Curabitur et tempus eri consequat tincidunt turpis sit
-                    amet imperdiet. Praesent nonatourean olei aptent taciti
-                    sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent
-                    Class officelan nonatoureanor mauris laoreet, iaculis libero
-                    quis. Curabitur et tempus eri consequat tincidunt turpis sit
-                    amet imperdiet. Praesent nonatourean olei aptent taciti
-                    sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet.
-                        Praesent Classei consequat tincidunt turpis sit amet
-                        imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img
-                        class="cs-quote-icon"
-                        loading="lazy"
-                        decoding="async"
-                        src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-                        alt="gavel"
-                        width="136"
-                        height="77"
-                    />
-                </div>
-                <a href="/about" class="cs-button-solid">More About Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--            Extra Content To Rank             -->
-    <!-- ============================================ -->
-
-    <section id="sbs-r">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="/assets/images/construction-m.jpg"
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="/assets/images/construction.jpg"
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="/assets/images/construction.jpg"
-                        alt="house"
-                        loading="lazy"
-                        width="400"
-                        height="560"
-                    />
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="/assets/images/cabinets2-m.jpg"
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="/assets/images/cabinets2.jpg"
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="/assets/images/cabinets2.jpg"
-                        alt="cabinets"
-                        loading="lazy"
-                        width="400"
-                        height="560"
-                    />
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">SEO Ranking</span>
-                <h2 class="cs-title">Talk about a main service keyword</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent
-                    Class officelan nonatoureanor mauris laoreet, iaculis libero
-                    quis. Curabitur et tempus eri consequat tincidunt turpis sit
-                    amet imperdiet. Praesent nonatourean olei aptent taciti
-                    sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Non tenetur, iure nihil ipsam qui atque commodi id
-                    voluptatem nesciunt, quis animi fuga cum doloribus! Eaque
-                    laboriosam, unde consectetur iure asperiores ullam.
-                    Consequuntur debitis a voluptatibus vitae optio autem
-                    explicabo quia neque est quas, in placeat. Lorem ipsum dolor
-                    sit amet consectetur adipisicing elit. Doloribus modi
-                    laudantium voluptatibus rem libero error minus quia eligendi
-                    sapiente eos.
-                </p>
-                <a href="/blog" class="cs-button-solid">Read our Blog</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery">
-        <div class="cs-container">
-            <span class="cs-topper">Our Portfolio</span>
-            <h2 class="cs-title">
-                Et orci volutpat, back up generator installations
-            </h2>
-            <div class="cs-image-group">
-                <!-- Row 1-->
-                <div class="cs-row cs-row-1">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port1-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port1.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port1.jpg"
-                            alt="new hallway"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port4-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port4.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port4.jpg"
-                            alt="new home construction"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port7-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port7.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port7.jpg"
-                            alt="building a new wall"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port2-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port2.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port2.jpg"
-                            alt="new kitchen"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port5-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port5.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port5.jpg"
-                            alt="apartment addition"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port8-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port8.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port8.jpg"
-                            alt="kew kitchen cabinets"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port3-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port3.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port3.jpg"
-                            alt="new kitchen"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port6-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port6.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port6.jpg"
-                            alt="apartment addition"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source
-                            media="(max-width: 600px)"
-                            srcset="/assets/images/portfolio/port9-m.jpg"
-                        />
-                        <source
-                            media="(min-width: 601px)"
-                            srcset="/assets/images/portfolio/port9.jpg"
-                        />
-                        <img
-                            aria-hidden="true"
-                            decoding="async"
-                            src="/assets/images/portfolio/port9.jpg"
-                            alt="kew kitchen cabinets"
-                            loading="lazy"
-                            width="400"
-                            height="560"
-                        />
-                    </picture>
-                </div>
-            </div>
-            <a href="/projects" class="cs-button-solid">View Full Gallery</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
+    <!--                  Reviews                    -->
     <!-- ============================================ -->
 
     <section id="reviews">
         <div class="cs-container">
             <span class="cs-topper">Our Reviews</span>
-            <h2 class="cs-title">Words From Our Customers</h2>
+            <h2 class="cs-title">What Our Customers Say</h2>
             <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-                dolor volutpat porttitor sagittis nunc nisl. Sagittis sit
-                pellentesque gravida viverra. Leo ut sed euismod tortor risus
-                et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
+                Hear from our satisfied customers about their experience with our RV repair and maintenance services. 
+                We take pride in delivering exceptional service that keeps our clients coming back.
             </p>
             <ul class="cs-card-group">
                 <!-- Review 1 -->
@@ -574,15 +301,12 @@ eleventyNavigation:
                         height="80"
                     />
                     <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin.
-                        Consequat dolor habitasse nam sed tempor. Viverra magna
-                        pharetra rhoncus, nec sed ullamcorper lectus et. Auctor
-                        velit diam fermentum consequat. Feugiat viverra massa
-                        urna, volutpat orci imperdiet eget eget.
+                        "Zack did an amazing job servicing our RV's water heater. He was thorough and professional. 
+                        The upgrade to our setup has made such a difference in our camping experience!"
                     </p>
                     <span class="cs-reviewer">
-                        Jon Doe
-                        <span class="cs-desc">Homeowner</span>
+                        Robert Johnson
+                        <span class="cs-desc">Full-time RVer</span>
                     </span>
                     <img
                         class="cs-item-stars"
@@ -590,7 +314,7 @@ eleventyNavigation:
                         loading="lazy"
                         decoding="async"
                         src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                        alt="stars"
+                        alt="5 stars"
                         width="96"
                         height="16"
                     />
@@ -608,15 +332,13 @@ eleventyNavigation:
                         height="80"
                     />
                     <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin.
-                        Consequat dolor habitasse nam sed tempor. Viverra magna
-                        pharetra rhoncus, nec sed ullamcorper lectus et. Auctor
-                        velit diam fermentum consequat. Feugiat viverra massa
-                        urna, volutpat orci imperdiet eget eget.
+                        "Had an emergency repair needed during our vacation and Zack came through big time! 
+                        Fixed our AC unit quickly and got us back on the road. Fair pricing and excellent service. 
+                        Highly recommend!"
                     </p>
                     <span class="cs-reviewer">
-                        Jane Doe
-                        <span class="cs-desc">Homeowner</span>
+                        Sarah Martinez
+                        <span class="cs-desc">Weekend Camper</span>
                     </span>
                     <img
                         class="cs-item-stars"
@@ -624,7 +346,7 @@ eleventyNavigation:
                         loading="lazy"
                         decoding="async"
                         src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                        alt="stars"
+                        alt="5 stars"
                         width="96"
                         height="16"
                     />
@@ -634,10 +356,40 @@ eleventyNavigation:
                 aria-label="read more reviews"
                 href="/reviews"
                 class="cs-button-solid"
-                >Our Reviews</a
+                >See More Reviews</a
             >
         </div>
     </section>
 
-    {% include 'components/cta.html' %}
+    <!-- ============================================ -->
+    <!--                 Contact Us                   -->
+    <!-- ============================================ -->
+
+    <section id="contact" class="section">
+        <div class="cs-container">
+            <span class="cs-topper">Schedule Service</span>
+            <h2 class="cs-title">Get Your RV Service Started Today</h2>
+            <p class="cs-text">
+                Don't wait until small issues become big problems. Our certified RV technicians 
+                are ready to help keep your home on wheels in perfect condition.
+            </p>
+            <div class="cs-contact-group">
+                <div class="cs-contact-info">
+                    <div class="cs-contact-item">
+                        <p class="cs-phone">📞 (555) 123-4567</p>
+                        <p class="cs-hours">⏰ Mon-Fri: 8:00 AM - 5:00 PM</p>
+                        <p class="cs-address">📍 1234 RV Service Lane, Your City, ST 12345</p>
+                    </div>
+                    <div class="cs-contact-cta">
+                        <p class="cs-cta-text">24/7 Emergency RV Service Available</p>
+                        <div class="cs-button-group">
+                            <a href="/contact" class="cs-button-solid">Schedule Service</a>
+                            <a href="tel:(555)123-4567" class="cs-button-transparent">Call Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 {% endblock %}

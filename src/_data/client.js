@@ -1,8 +1,8 @@
 module.exports = {
     name: "Code Stitch Web Designs",
-    email: "help@codestitch.app",
+    email: "help@gmail.app",
     phoneForTel: "555-779-4407",
-    phoneFormatted: "(555) 779-4407",
+    phoneFormatted: "(552) 779-4407",
     address: {
         lineOne: "First Address Line",
         lineTwo: "Second Address Line",

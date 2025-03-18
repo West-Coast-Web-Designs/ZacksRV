@@ -4,85 +4,278 @@
 <--- -------------------------- -*/
 /* Mobile - 360px - Contains hover animation */
 @media only screen and (min-width: 0rem) {
-    #gallery {
-        position: relative;
-        /* Prevents overflow from the image going off screen */
-        overflow: hidden;
-        padding: var(--sectionPadding);
-        /* Centers button */
-        text-align: center;
+  #gallery {
+    position: relative;
+    /* Prevents overflow from the image going off screen */
+    overflow: hidden;
+    padding: var(--sectionPadding);
+    /* Centers button */
+    text-align: center;
+  }
+  #gallery .cs-container {
+    margin: auto;
+    max-width: 82.625em;
+    width: 100%;
+  }
+  #gallery .cs-image-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto 3.75rem;
+    max-width: 82.625em;
+    width: 100%;
+    padding: 0;
+    /* used rem so it doesn't scale with the font size of on parent */
+    font-size: min(1.1vw, 1em);
+    gap: 1.875em;
+  }
+  #gallery .cs-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.875em;
+  }
+  #gallery .cs-picture {
+    position: relative;
+    display: block;
+  }
+  #gallery .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #gallery .cs-row-1 .cs-picture1 {
+    height: 35.4375em;
+    width: 26.25em;
+  }
+  #gallery .cs-row-1 .cs-picture2 {
+    height: 39.3125em;
+    width: 26.25em;
+  }
+  #gallery .cs-row-1 .cs-picture3 {
+    height: 32em;
+    width: 26.25em;
+  }
+  #gallery .cs-row-2 .cs-picture1 {
+    height: 30.75em;
+    width: 26.25em;
+  }
+  #gallery .cs-row-2 .cs-picture2 {
+    height: 32.3125em;
+    width: 26.25em;
+  }
+  #gallery .cs-row-2 .cs-picture3 {
+    height: 39.3125em;
+    width: 26.25em;
+  }
+  #gallery .cs-row-3 .cs-picture1 {
+    height: 39.0625em;
+    width: 26.25em;
+  }
+  #gallery .cs-row-3 .cs-picture2 {
+    height: 28.25em;
+    width: 26.25em;
+  }
+  #gallery .cs-row-3 .cs-picture3 {
+    height: 39.3125em;
+    width: 26.25em;
+  }
+}
+
+/* Services Section Styles */
+#services-1188 {
+    padding: var(--sectionPadding);
+    background-color: #fff;
+}
+
+#services-1188 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#services-1188 .cs-content {
+    text-align: center;
+    max-width: 40rem;
+    margin: 0 auto 3rem;
+}
+
+#services-1188 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+#services-1188 .cs-item {
+    text-align: left;
+    list-style: none;
+    background-color: #f7f7f7;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#services-1188 .cs-item:hover {
+    transform: translateY(-5px);
+}
+
+#services-1188 .cs-item:hover .cs-item-content {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#services-1188 .cs-item-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+#services-1188 .cs-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    z-index: 2;
+    padding: 2rem;
+}
+
+#services-1188 .cs-item:hover .cs-item-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#services-1188 .cs-item-overlay .cs-button-solid {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    margin: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    text-shadow: none;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    height: 3rem;
+    line-height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#services-1188 .cs-item:hover .cs-item-overlay .cs-button-solid {
+    transform: translateY(0);
+}
+
+#services-1188 .cs-item-overlay .cs-button-solid:hover {
+    background-color: var(--primaryDark);
+    color: white;
+    transform: scale(1.05);
+}
+
+#services-1188 .cs-picture {
+    width: 3.75rem;
+    height: 3.75rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+#services-1188 .cs-icon {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    /* Convert red icons to forest dark green */
+    filter: hue-rotate(110deg) saturate(80%) brightness(0.7);
+}
+
+#services-1188 .cs-text-group {
+    flex: 1;
+}
+
+#services-1188 .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    margin: 0 0 0.75rem;
+    color: var(--headerColor);
+}
+
+#services-1188 .cs-item-text {
+    margin: 0;
+    color: var(--bodyTextColor);
+    font-size: 0.9375rem;
+    line-height: 1.5em;
+}
+
+#services-1188 .cs-button-solid {
+    display: none;
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-1188 .cs-card-group {
+        grid-template-columns: repeat(2, 1fr);
     }
-    #gallery .cs-container {
-        margin: auto;
-        max-width: 82.625em;
-        width: 100%;
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #services-1188 .cs-card-group {
+        grid-template-columns: repeat(3, 1fr);
     }
-    #gallery .cs-image-group {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        margin: 0 auto 3.75rem;
-        max-width: 82.625em;
-        width: 100%;
-        padding: 0;
-        /* used rem so it doesn't scale with the font size of on parent */
-        font-size: min(1.1vw, 1em);
-        gap: 1.875em;
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode #services-1188 {
+        background-color: var(--dark);
     }
-    #gallery .cs-row {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 1.875em;
+
+    body.dark-mode #services-1188 .cs-item {
+        background-color: var(--medium);
     }
-    #gallery .cs-picture {
-        position: relative;
-        display: block;
+
+    body.dark-mode #services-1188 .cs-picture {
+        background-color: var(--dark);
     }
-    #gallery .cs-picture img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+
+    body.dark-mode #services-1188 .cs-h3 {
+        color: var(--bodyTextColorWhite);
     }
-    #gallery .cs-row-1 .cs-picture1 {
-        height: 35.4375em;
-        width: 26.25em;
-    }
-    #gallery .cs-row-1 .cs-picture2 {
-        height: 39.3125em;
-        width: 26.25em;
-    }
-    #gallery .cs-row-1 .cs-picture3 {
-        height: 32em;
-        width: 26.25em;
-    }
-    #gallery .cs-row-2 .cs-picture1 {
-        height: 30.75em;
-        width: 26.25em;
-    }
-    #gallery .cs-row-2 .cs-picture2 {
-        height: 32.3125em;
-        width: 26.25em;
-    }
-    #gallery .cs-row-2 .cs-picture3 {
-        height: 39.3125em;
-        width: 26.25em;
-    }
-    #gallery .cs-row-3 .cs-picture1 {
-        height: 39.0625em;
-        width: 26.25em;
-    }
-    #gallery .cs-row-3 .cs-picture2 {
-        height: 28.25em;
-        width: 26.25em;
-    }
-    #gallery .cs-row-3 .cs-picture3 {
-        height: 39.3125em;
-        width: 26.25em;
+
+    body.dark-mode #services-1188 .cs-item-text {
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
     }
 }
 

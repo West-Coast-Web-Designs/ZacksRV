@@ -1,0 +1,174 @@
+---
+title: "Services | Zack's RV Repair"
+description: "Meta description for the page"
+preloadImg: "/assets/images/logo-small.jpg"
+permalink: "services/"
+eleventyNavigation:
+    key: Services
+    order: 300
+---
+
+{# 
+    The starter kit uses the eleventy navigation plugin to render navigation items using data defined within the page,
+    making the navigation easy to control in larger projects.
+    https://www.11ty.dev/docs/plugins/navigation/
+
+    In the starter kit, dropdowns are created by defining a "parent" in the eleventyNavigation frontmatter data of the child
+    page (see pages/project-one.html as an example).
+
+    To create the dropdown "parent", which gets rendered as a <span> (as opposed to an <a>) we need to create a blank HTML
+    file with the eleventyNavigation frontmatter defined, as shown in this example file.
+
+    Make sure the permalink is set to "false", which prevents a HTML file being made in /public and keeps this page from
+    being written to the sitemap.
+#}
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/projects.css" />
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <h1 id="home-h">RV Services</h1>
+        <picture>
+            <source
+                media="(max-width: 600px)"
+                srcset="/assets/images/Services-m.jpg"
+            />
+            <source
+                media="(min-width: 601px)"
+                srcset="/assets/images/Services.jpg"
+            />
+            <img
+                aria-hidden="true"
+                decoding="async"
+                src="/assets/images/Services.jpg"
+                alt="kitchen cabinets"
+                loading="eager"
+                width="2500"
+                height="1667"
+            />
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                   Services                   -->
+    <!-- ============================================ -->
+
+    <section id="services-1188">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Our Services</span>
+                <h2 class="cs-title">Expert RV Repair & Maintenance Services</h2>
+                <p class="cs-text">
+                    From routine maintenance to emergency repairs, our certified technicians provide comprehensive RV care to keep your vehicle in top condition.
+                </p>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <div class="cs-item-content">
+                        <picture class="cs-picture">
+                            <img class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/engineering%201%20red.svg"
+                                loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                        </picture>
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">General Service, Repair and Replacement</h3>
+                            <p class="cs-item-text">We offer services, repairs and replacements of applicances and systems, billed at the hourly service rates</p>
+                        </div>
+                    </div>
+                    <div class="cs-item-overlay">
+                        <a href="/contact" class="cs-button-solid">Schedule Service</a>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-item-content">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/brake-red.svg"
+                                loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                        </picture>
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Slide-Out Maintenance</h3>
+                            <p class="cs-item-text">Regular slide-out maintenance helps prevent wear and ensures smooth operation. Service includes lubricating tracks and gears, treating rubber seals and wipers, and inspecting alignment, toppers, and seals. Recommended annually.</p>
+                        </div>
+                    </div>
+                    <div class="cs-item-overlay">
+                        <a href="/contact" class="cs-button-solid">Schedule Service</a>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-item-content">
+                        <picture class="cs-picture">
+                            <img class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/air-conditioner-red.svg"
+                                loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                        </picture>
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Appliance Services</h3>
+                            <p class="cs-item-text">Expert climate control system maintenance and repairs for year-round comfort.We service and repair essential RV appliances to ensure they run efficiently, including refrigerators, water heaters and furnaces.</p>
+                        </div>
+                    </div>
+                    <div class="cs-item-overlay">
+                        <a href="/contact" class="cs-button-solid">Schedule Service</a>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-item-content">
+                        <picture class="cs-picture">
+                            <img class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/motor%201%20red.svg" loading="lazy"
+                                decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                        </picture>
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Winterization</h3>
+                            <p class="cs-item-text">Drains fresh water tank and water heater, clears lines with compressed air, fills P-traps with antifreeze, and pumps antifreeze through the system (includes up to 2 gallons).</p>
+                        </div>
+                    </div>
+                    <div class="cs-item-overlay">
+                        <a href="/contact" class="cs-button-solid">Schedule Service</a>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-item-content">
+                        <picture class="cs-picture">
+                            <img class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/alloy-wheel-red.svg" loading="lazy"
+                                decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                        </picture>
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Inspections and Orientations</h3>
+                            <p class="cs-item-text">Ensure your RV is safe and fully operational with these essential services. Walkthrough of exterior and interior features, dashboard functions, and leveling systems.</p>
+                        </div>
+                    </div>
+                    <div class="cs-item-overlay">
+                        <a href="/contact" class="cs-button-solid">Schedule Service</a>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-item-content">
+                        <picture class="cs-picture">
+                            <img class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/contamination-red.svg"
+                                loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                        </picture>
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Electrical Systems</h3>
+                            <p class="cs-item-text">Comprehensive electrical system diagnostics and repairs for RV components.</p>
+                        </div>
+                    </div>
+                    <div class="cs-item-overlay">
+                        <a href="/contact" class="cs-button-solid">Schedule Service</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    {% include 'components/cta.html' %}
+{% endblock %}

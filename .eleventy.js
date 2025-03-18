@@ -3,6 +3,9 @@ const pluginEleventyNavigation = require("@11ty/eleventy-navigation");
 const pluginMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
 
+const eleventyPluginSharpImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
+
+
 // Configs
 const configCss = require("./src/config/css");
 const configJs = require("./src/config/javascript");
@@ -40,6 +43,11 @@ module.exports = function (eleventyConfig) {
                   PLUGINS - Adds additional eleventy functionality 
     =======================================================================*/
     /** https://www.11ty.dev/docs/plugins/ */
+
+    eleventyConfig.addPlugin(eleventyPluginSharpImages, {
+        urlPath: "/assets/images",
+        outputDir: "public/assets/images",
+    });    
 
     /**
      *  ELEVENTY NAVIGATION
