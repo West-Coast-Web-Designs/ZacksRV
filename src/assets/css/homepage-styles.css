@@ -1,0 +1,509 @@
+/* ===== REVIEWS SECTION STYLING ===== */
+#reviews {
+    padding: 60px 20px !important;
+    background-color: #f8f8f8 !important;
+    margin-bottom: 0 !important;
+}
+
+#reviews .cs-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+#reviews .cs-topper {
+    color: var(--primary) !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 10px !important;
+    display: block !important;
+    text-align: center !important;
+}
+
+#reviews .cs-title {
+    font-size: 2.5rem !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+    color: #333 !important;
+    font-weight: 700 !important;
+}
+
+#reviews .cs-text {
+    max-width: 800px !important;
+    margin: 0 auto 40px !important;
+    text-align: center !important;
+    color: #555 !important;
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+}
+
+#reviews .cs-card-group {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 30px !important;
+    margin-bottom: 40px !important;
+}
+
+#reviews .cs-item {
+    background: white !important;
+    border-radius: 12px !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1) !important;
+    padding: 30px !important;
+    max-width: 500px !important;
+    width: 100% !important;
+    position: relative !important;
+    margin: 30px 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+#reviews .cs-item-img {
+    position: absolute !important;
+    top: -25px !important;
+    left: 30px !important;
+    border: 4px solid white !important;
+    border-radius: 50% !important;
+    width: 70px !important;
+    height: 70px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+}
+
+#reviews .cs-item-p {
+    margin: 20px 0 30px 0 !important;
+    color: #444 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+    border-bottom: 1px solid #eee !important;
+    padding-bottom: 20px !important;
+}
+
+#reviews .cs-reviewer {
+    font-weight: bold !important;
+    color: #333 !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 10px !important;
+    display: block !important;
+}
+
+#reviews .cs-desc {
+    font-size: 0.9rem !important;
+    color: #777 !important;
+    display: block !important;
+    margin-top: 3px !important;
+}
+
+#reviews .cs-item-stars {
+    margin-top: 10px !important;
+    width: auto !important;
+    height: 18px !important;
+}
+
+#reviews .cs-button-solid {
+    background-color: var(--primary) !important;
+    color: white !important;
+    padding: 12px 30px !important;
+    font-size: 1rem !important;
+    border-radius: 6px !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+#reviews .cs-button-solid:hover {
+    background-color: var(--primaryDark) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15) !important;
+}
+
+/* Make reviews responsive */
+@media only screen and (max-width: 768px) {
+    #reviews .cs-card-group {
+        flex-direction: column !important;
+    }
+    
+    #reviews .cs-item {
+        max-width: 100% !important;
+    }
+    
+    #reviews .cs-title {
+        font-size: 2rem !important;
+    }
+}
+
+/* ===== CONTACT FORM STYLING ===== */
+.contact-section {
+    background-color: #444 !important;
+    color: white !important;
+    padding: 90px 20px !important;
+    text-align: center !important;
+    margin-top: 0 !important;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.contact-section .cs-content {
+    margin-bottom: 50px !important;
+}
+
+.contact-section .cs-topper {
+    color: #8aad8a !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    font-size: 1.2rem !important;
+    letter-spacing: 1.5px !important;
+    display: inline-block !important;
+    margin-bottom: 15px !important;
+}
+
+.contact-section .cs-title {
+    color: white !important;
+    font-size: 3rem !important;
+    margin: 20px 0 !important;
+    font-weight: 700 !important;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.contact-section .cs-text {
+    color: #e0e0e0 !important;
+    max-width: 800px !important;
+    margin: 25px auto !important;
+    font-size: 1.25rem !important;
+    line-height: 1.6 !important;
+}
+
+/* Significantly enhanced form styles */
+.basic-form-container {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 20px !important;
+    padding: 50px !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.form-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 20px !important;
+}
+
+.form-label {
+    text-align: left !important;
+    padding: 15px !important;
+    vertical-align: top !important;
+    width: 30% !important;
+    font-weight: bold !important;
+    color: white !important;
+    font-size: 1.2rem !important;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-field {
+    text-align: left !important;
+    padding: 10px !important;
+    width: 70% !important;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100% !important;
+    padding: 18px 22px !important;
+    border: 3px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 12px !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 1.2rem !important;
+    transition: all 0.3s ease !important;
+    color: #333 !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.form-field input:hover,
+.form-field select:hover,
+.form-field textarea:hover {
+    background-color: rgba(255, 255, 255, 0.97) !important;
+    border-color: #8aad8a !important;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    background-color: white !important;
+    border-color: #6b966b !important;
+    box-shadow: 0 0 12px rgba(107, 150, 107, 0.5) !important;
+    outline: none !important;
+}
+
+.form-field textarea {
+    min-height: 150px !important;
+    resize: vertical !important;
+}
+
+.form-submit {
+    text-align: center !important;
+    padding-top: 30px !important;
+}
+
+.submit-btn {
+    background-color: #6b966b !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 20px 40px !important;
+    font-size: 1.4rem !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    min-width: 320px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    position: relative !important;
+}
+
+.submit-btn:hover {
+    background-color: #5a855a !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+.submit-btn:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Mobile adjustments with !important */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 60px 15px !important;
+    }
+    
+    .basic-form-container {
+        padding: 30px 20px !important;
+        border-radius: 12px !important;
+    }
+    
+    .form-table, 
+    .form-table tbody, 
+    .form-table tr, 
+    .form-table td {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .contact-section .cs-title {
+        font-size: 2.5rem !important;
+    }
+    
+    .form-label {
+        padding: 15px 10px 5px 10px !important;
+        font-size: 1.15rem !important;
+    }
+    
+    .form-field {
+        padding: 5px 10px 15px 10px !important;
+    }
+    
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+        padding: 14px 16px !important;
+        font-size: 1.1rem !important;
+    }
+    
+    .submit-btn {
+        width: 100% !important;
+        padding: 16px 20px !important;
+        font-size: 1.2rem !important;
+        min-width: unset !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 50px 15px !important;
+    }
+    
+    .contact-section .cs-title {
+        font-size: 2.2rem !important;
+    }
+    
+    .contact-section .cs-text {
+        font-size: 1.1rem !important;
+    }
+    
+    .contact-section .cs-topper {
+        font-size: 1.1rem !important;
+    }
+    
+    .basic-form-container {
+        padding: 25px 15px !important;
+    }
+    
+    .form-label {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* ===== SERVICES SECTION ENHANCEMENTS ===== */
+#services-1354 {
+    padding: 60px 20px !important;
+}
+
+#services-1354 .cs-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+#services-1354 .cs-content {
+    text-align: center !important;
+    margin-bottom: 40px !important;
+}
+
+#services-1354 .cs-title {
+    font-size: 2.5rem !important;
+    margin-bottom: 20px !important;
+    color: #333 !important;
+    font-weight: 700 !important;
+}
+
+#services-1354 .cs-card-group {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 30px !important;
+}
+
+#services-1354 .cs-item {
+    position: relative !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+#services-1354 .cs-item:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+}
+
+#services-1354 .cs-link {
+    display: block !important;
+    height: 100% !important;
+    padding: 20px !important;
+}
+
+#services-1354 .cs-h3 {
+    position: relative !important;
+    z-index: 10 !important;
+    color: white !important;
+    font-size: 1.5rem !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5) !important;
+    text-align: center !important;
+    padding: 100px 20px !important;
+    font-weight: 700 !important;
+}
+
+#services-1354 .cs-background {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#services-1354 .cs-background-img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.5s ease !important;
+}
+
+#services-1354 .cs-item:hover .cs-background-img {
+    transform: scale(1.1) !important;
+}
+
+#services-1354 .cs-background-img::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%) !important;
+}
+
+/* Improve services cards at small screen sizes */
+@media only screen and (max-width: 768px) {
+    #services-1354 .cs-card-group {
+        flex-direction: column !important;
+    }
+    
+    #services-1354 .cs-item {
+        width: 100% !important;
+        max-width: 500px !important;
+        margin: 0 auto 20px !important;
+    }
+}
+
+/* ===== STANDARD SERVICES SECTION IMPROVEMENTS ===== */
+#services.services {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 30px !important;
+    padding: 60px 20px !important;
+    background-color: #f3f3f3 !important;
+}
+
+#services.services .card {
+    background-color: white !important;
+    border-radius: 16px !important;
+    padding: 40px 30px !important;
+    max-width: 300px !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+#services.services .card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12) !important;
+}
+
+#services.services .card picture {
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 25px !important;
+}
+
+#services.services .card picture img {
+    width: 60px !important;
+    height: 60px !important;
+}
+
+#services.services .card h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
+    color: #333 !important;
+}
+
+#services.services .card p {
+    color: #666 !important;
+    text-align: center !important;
+    line-height: 1.6 !important;
+}
+
+/* Responsive adjustments for services */
+@media only screen and (max-width: 768px) {
+    #services.services {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    #services.services .card {
+        width: 100% !important;
+        max-width: 400px !important;
+    }
+} 

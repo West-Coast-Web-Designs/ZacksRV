@@ -87,6 +87,8 @@
   #cs-contact #cs-form .cs-button-solid {
     border: none;
     width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
   }
   #cs-contact .cs-right-section {
     position: relative;
@@ -264,6 +266,45 @@
     /* lets parent background-color bleed through and darken it */
     opacity: 0.5;
   }
+}
+
+#cs-form {
+  width: 100%;
+}
+
+#cs-form select#service-type {
+  width: 100%;
+  min-width: 300px;
+  height: 4.5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #b4b2c7;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#cs-form select#service-type:hover,
+#cs-form select#service-type:focus {
+  border-color: var(--primary);
+}
+
+.cs-button-solid {
+  border-radius: 2rem !important;
+  overflow: hidden;
+}
+
+.cs-button-solid:hover {
+  border-radius: 2rem !important;
+}
+
+.cs-button-transparent {
+  border-radius: 2rem !important;
+  overflow: hidden;
+}
+
+.cs-button-transparent:hover {
+  border-radius: 2rem !important;
 }
 
 /*# sourceMappingURL=contact.css.map */

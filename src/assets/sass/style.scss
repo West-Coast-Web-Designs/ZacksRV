@@ -1,0 +1,69 @@
+// Main SASS file
+@import 'image-optimization';
+@import 'home-contact';
+
+// Apply image optimization globally
+@include optimize-images;
+
+// Add custom styles for specific image use cases
+.hero-image {
+  @include optimized-image-loading;
+  
+  picture {
+    width: 100%;
+    height: 100%;
+    
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// Service cards responsive images
+.service-card-image {
+  @include optimized-image-loading;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+  
+  picture {
+    height: 100%;
+    
+    img {
+      object-fit: cover;
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+// Team/profile image optimization
+.profile-image {
+  @include optimized-image-loading;
+  border-radius: 50%;
+  overflow: hidden;
+  
+  picture, img {
+    border-radius: 50%;
+  }
+}
+
+// Gallery image optimization
+.gallery-image {
+  @include optimized-image-loading;
+  
+  img {
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover img {
+    transform: scale(1.02);
+  }
+} 

@@ -1,0 +1,36 @@
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero">
+    <div class="cs-container">
+        <div class="cs-flex-group">
+            {% if heroContent.topper %}
+            <span class="cs-topper">{{ heroContent.topper }}</span>
+            {% endif %}
+            <h1 class="cs-title">{{ heroContent.title }}</h1>
+            {% if heroContent.text %}
+            <p class="cs-text">{{ heroContent.text }}</p>
+            {% endif %}
+            {% if heroContent.primaryButtonText %}
+            <a href="{{ heroContent.primaryButtonLink }}" class="cs-button-solid">{{ heroContent.primaryButtonText }}</a>
+            {% endif %}
+            {% if heroContent.secondaryButtonText %}
+            <a href="{{ heroContent.secondaryButtonLink }}" class="cs-button-transparent">{{ heroContent.secondaryButtonText }}</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    {% include "components/optimized-image.html",
+        src: heroContent.desktopImage | replace("/assets/images/", "") | replace(".jpg", "") | replace(".png", ""),
+        alt: heroContent.imageAlt,
+        width: 3600,
+        height: 2400,
+        loading: "eager",
+        sizes: "(max-width: 600px) 100vw, 100vw",
+        pictureClass: "cs-picture",
+        decoding: "async",
+        eager: true
+    %}
+</section> 

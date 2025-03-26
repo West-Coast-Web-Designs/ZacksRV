@@ -1,0 +1,152 @@
+#cs-contact {
+  margin-bottom: 4rem;
+  padding: var(--sectionPadding);
+  background-color: #f7f7f7;
+}
+#cs-contact .cs-container {
+  margin: auto;
+  max-width: 50rem;
+  width: 100%;
+}
+#cs-contact .cs-content {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+#cs-contact .cs-content .cs-topper {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+#cs-contact .cs-content .cs-title {
+  margin-bottom: 1rem;
+}
+#cs-contact .cs-content .cs-text {
+  max-width: 40rem;
+  margin: 0 auto 1.5rem;
+}
+
+#cs-form {
+  width: 100%;
+}
+#cs-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  color: var(--headerColor);
+}
+#cs-form label.cs-service-label {
+  margin-bottom: 1.5rem;
+}
+#cs-form label.cs-label-message {
+  margin-bottom: 2.5rem;
+}
+#cs-form input,
+#cs-form textarea {
+  border: 1px solid #b4b2c7;
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+  height: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 1.25rem;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+#cs-form input:hover, #cs-form input:focus,
+#cs-form textarea:hover,
+#cs-form textarea:focus {
+  border: 1px solid var(--primary);
+}
+#cs-form select {
+  border: 1px solid #b4b2c7;
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+  height: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 1.25rem;
+  font-size: 1rem;
+  transition: border 0.3s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem top 50%;
+  background-size: 0.65rem auto;
+  padding-right: 2.5rem;
+}
+#cs-form select:hover, #cs-form select:focus {
+  border: 1px solid var(--primary);
+}
+#cs-form .cs-service-label select {
+  height: 5rem;
+  padding: 0 1.5rem;
+  font-size: 1.05rem;
+}
+#cs-form textarea {
+  min-height: 7.5rem;
+  padding-top: 1.25rem;
+  font-family: inherit;
+}
+#cs-form .cs-button-solid {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  background-color: var(--primary);
+  color: #1a1a1a;
+  font-weight: 700;
+  margin: auto;
+}
+#cs-form .cs-button-solid:hover {
+  background-color: var(--primaryDark);
+}
+
+@media only screen and (min-width: 48rem) {
+  #cs-contact {
+    padding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+  }
+  #cs-contact .cs-container {
+    padding: 0 1rem;
+  }
+  #cs-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #cs-form label {
+    width: 48%;
+  }
+  #cs-form label.cs-label-message {
+    width: 100%;
+  }
+  #cs-form .cs-button-solid {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+body.dark-mode #cs-contact {
+  background-color: var(--dark);
+}
+body.dark-mode #cs-contact .cs-title,
+body.dark-mode #cs-contact .cs-text {
+  color: var(--bodyTextColorWhite);
+}
+body.dark-mode #cs-form label {
+  color: var(--bodyTextColorWhite);
+}
+body.dark-mode #cs-form input,
+body.dark-mode #cs-form textarea,
+body.dark-mode #cs-form select {
+  background-color: var(--medium);
+  color: var(--bodyTextColorWhite);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+body.dark-mode #cs-form select {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+/*# sourceMappingURL=home-contact.css.map */

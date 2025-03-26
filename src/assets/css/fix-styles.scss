@@ -1,0 +1,93 @@
+/* Fix Styles for Zack's RV Repair */
+
+// Fix image display issues by using fallback formats
+// This will ensure images display even if WebP versions are missing
+picture {
+  img {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  source {
+    // Hide the broken source elements
+    &[srcset$=".webp"] {
+      display: none;
+    }
+  }
+}
+
+// Fix form input width issues
+#cs-contact {
+  #cs-form {
+    width: 100%;
+    max-width: 50rem;
+    
+    input,
+    select,
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.75rem 1rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      
+      &:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 2px rgba(107, 150, 107, 0.25);
+      }
+    }
+    
+    textarea {
+      min-height: 10rem;
+    }
+    
+    .cs-button-solid {
+      margin-top: 2rem;
+      
+      @media (min-width: 48rem) {
+        max-width: 250px;
+        display: block;
+        margin: 2rem auto 0;
+      }
+    }
+  }
+}
+
+// Fix mobile layout issues
+@media (max-width: 767px) {
+  // Fix dark mode toggle overlapping with contact button
+  #dark-mode-toggle {
+    top: 80px !important;
+    right: 20px !important;
+    z-index: 10000 !important;
+  }
+  
+  // Add spacing between services and about us sections
+  #services {
+    margin-bottom: 2rem;
+  }
+  
+  // Ensure proper section spacing
+  section {
+    position: relative;
+    z-index: 1;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
+    & + section {
+      margin-top: 2rem;
+    }
+  }
+  
+  // Fix overlapping sections
+  #about-us {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    background-color: var(--gray-100);
+    z-index: 2;
+  }
+} 

@@ -382,14 +382,106 @@ eleventyNavigation:
                     </div>
                     <div class="cs-contact-cta">
                         <p class="cs-cta-text">24/7 Emergency RV Service Available</p>
-                        <div class="cs-button-group">
-                            <a href="/contact" class="cs-button-solid">Schedule Service</a>
-                            <a href="tel:(555)123-4567" class="cs-button-transparent">Call Now</a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Contact Form                 -->
+    <!-- ============================================ -->
+
+    <section id="contact-form" class="section">
+        <div class="cs-container">
+            <form id="cs-form-home" name="RV Service Request - Home" method="post" class="cs-form">
+                <div class="cs-content">
+                    <span class="cs-topper">Get Started</span>
+                    <h2 class="cs-title">Request Service Now</h2>
+                    <p class="cs-text">
+                        Fill out this quick form and we'll get back to you within 24 hours to schedule your service.
+                    </p>
+                </div>
+                <div class="cs-form-content">
+                    <label class="cs-label">
+                        Name
+                        <input required type="text" id="name-home" name="name" placeholder="Your Name" class="cs-input"/>
+                    </label>
+                    <label class="cs-label">
+                        Phone Number
+                        <input required type="tel" id="phone-home" name="phone" placeholder="Your Phone Number" class="cs-input"/>
+                    </label>
+                    <label class="cs-label">
+                        Email
+                        <input required type="email" id="email-home" name="email" placeholder="Your Email Address" class="cs-input"/>
+                    </label>
+                    <label class="cs-label">
+                        Service Needed
+                        <select required id="service-type-home" name="service-type" class="cs-input" style="height: 3.5rem;">
+                            <option value="">Select Service Type</option>
+                            <option value="General">General Repair</option>
+                            <option value="Slide Out">Slide Out Repair</option>
+                            <option value="Winterization">Winterization</option>
+                            <option value="Appliance">Appliance Services</option>
+                            <option value="electrical">Electrical Systems</option>
+                            <option value="maintenance">Routine Maintenance</option>
+                            <option value="emergency">Emergency Repair</option>
+                        </select>
+                    </label>
+                    <label class="cs-label cs-label-message">
+                        Message
+                        <textarea required name="Message" id="message-home" placeholder="Please describe your service needs..." class="cs-input"></textarea>
+                    </label>
+                    <button class="cs-button-solid cs-submit" type="submit">Submit Request</button>
+                </div>
+            </form>
+        </div>
+        <style>
+            /* Form Styling */
+            .cs-form {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 2rem;
+                background: #fff;
+                border-radius: 0.5rem;
+                box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+            }
+            
+            .cs-form-content {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+            
+            .cs-label {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                font-weight: bold;
+            }
+            
+            .cs-input {
+                padding: 0.75rem;
+                border: 1px solid #ccc;
+                border-radius: 0.25rem;
+                font-size: 1rem;
+            }
+            
+            textarea.cs-input {
+                min-height: 150px;
+                resize: vertical;
+            }
+            
+            .cs-submit {
+                margin-top: 1rem;
+            }
+            
+            #contact-form {
+                background: #f7f7f7;
+                padding: 5rem 1rem;
+            }
+        </style>
     </section>
 
 {% endblock %}

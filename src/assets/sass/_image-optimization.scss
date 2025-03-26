@@ -1,0 +1,116 @@
+// Image Optimization Mixins and Styles
+
+// Modern image loading behavior
+@mixin optimized-image-loading {
+  // Prevent layout shifts with proper aspect ratios
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    
+    // Add a subtle fade-in effect for lazy-loaded images
+    &[loading="lazy"] {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      
+      &.loaded, &:not([loading="lazy"]) {
+        opacity: 1;
+      }
+    }
+  }
+  
+  // Properly size picture elements
+  picture {
+    display: block;
+    line-height: 0;
+    font-size: 0; // Remove whitespace
+    
+    // Better support for object-fit
+    &.cover {
+      height: 100%;
+      
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+    
+    &.contain {
+      height: 100%;
+      
+      img {
+        object-fit: contain;
+        height: 100%;
+      }
+    }
+  }
+  
+  // Blur-up effect for image loading
+  .image-wrapper {
+    position: relative;
+    overflow: hidden;
+    
+    .placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      filter: blur(10px);
+      transform: scale(1.1); // Prevent blur edges from showing
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+      z-index: 1;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    img {
+      position: relative;
+      z-index: 2;
+      
+      &.loaded {
+        & + .placeholder {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+// Animation for lazy-loaded images
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+// Apply base image optimization styles
+@mixin optimize-images {
+  // Add support for native lazy loading
+  img[loading="lazy"] {
+    animation: fadeIn 0.3s ease-in forwards;
+  }
+  
+  // Apply general image optimization
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  // Better responsive image handling
+  picture {
+    display: block;
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  // Fix Safari lazy loading bug
+  @supports (font: -apple-system-body) and (-webkit-appearance: none) {
+    img[loading="lazy"] {
+      clip-path: inset(0.6px);
+    }
+  }
+} 

@@ -1,0 +1,137 @@
+/* Fix for the contact form on the home page */
+
+/* Override the basic container and form styles */
+#cs-contact {
+  padding: 3rem 1rem;
+  background-color: #f7f7f7;
+  margin-bottom: 3rem;
+}
+
+#cs-contact .cs-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#cs-contact .cs-content {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#cs-contact .cs-title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#cs-contact .cs-text {
+  max-width: 80%;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+/* Form field fixes */
+#cs-form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#cs-form label {
+  display: block;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  color: var(--headerColor);
+}
+
+#cs-form input,
+#cs-form textarea,
+#cs-form select {
+  display: block;
+  width: 100%;
+  border: 1px solid #b4b2c7;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  height: auto;
+  min-height: 3.5rem;
+  box-sizing: border-box;
+}
+
+#cs-form textarea {
+  min-height: 7.5rem;
+  padding-top: 1rem;
+}
+
+/* Service selection dropdown fix */
+#cs-form .cs-service-label select {
+  height: 5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.05rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem top 50%;
+  background-size: 0.65rem auto;
+  padding-right: 2.5rem;
+}
+
+/* Submit button fix */
+#cs-form .cs-button-solid {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 2rem auto 0;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--primary, #386641);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+/* Responsive layout fixes */
+@media only screen and (min-width: 768px) {
+  #cs-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  #cs-form label {
+    width: 48%;
+  }
+  
+  #cs-form .cs-label-message {
+    width: 100%;
+  }
+}
+
+/* Dark mode fixes */
+body.dark-mode #cs-contact {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode #cs-contact .cs-title,
+body.dark-mode #cs-contact .cs-text,
+body.dark-mode #cs-form label {
+  color: white;
+}
+
+body.dark-mode #cs-form input,
+body.dark-mode #cs-form textarea,
+body.dark-mode #cs-form select {
+  background-color: #333;
+  color: white;
+  border-color: #444;
+}
+
+body.dark-mode #cs-form select {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+} 

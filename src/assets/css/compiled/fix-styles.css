@@ -1,0 +1,248 @@
+/* Fix Styles for Zack's RV Repair */
+
+/* Fix image display issues by using fallback formats */
+/* This will ensure images display even if WebP versions are missing */
+picture img {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+picture source[srcset$=".webp"] {
+  display: none;
+}
+
+/* Fix form input width issues */
+#cs-contact {
+  padding: 4rem 1rem;
+  background-color: var(--gray-100);
+}
+
+#cs-contact .cs-container {
+  display: flex;
+  justify-content: center;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+#cs-contact #cs-form {
+  width: 100%;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#cs-contact #cs-form .cs-content {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#cs-contact #cs-form .cs-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+#cs-contact #cs-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  color: var(--headerColor);
+  margin-bottom: 0.3rem;
+}
+
+#cs-contact #cs-form input,
+#cs-contact #cs-form select,
+#cs-contact #cs-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+#cs-contact #cs-form input:focus,
+#cs-contact #cs-form select:focus,
+#cs-contact #cs-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(107, 150, 107, 0.25);
+}
+
+#cs-contact #cs-form .cs-label-message {
+  grid-column: 1 / -1;
+}
+
+#cs-contact #cs-form textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+#cs-contact #cs-form .cs-button-solid {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: white;
+  font-weight: 700;
+}
+
+#cs-contact #cs-form .cs-button-solid:hover {
+  background-color: var(--primaryDark);
+}
+
+/* Fix SVG icons */
+#services .card picture {
+  background-color: var(--primary);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+#services .card picture img {
+  width: 28px;
+  height: 28px;
+  color: white;
+  stroke: white;
+  fill: none;
+}
+
+/* Services section cards styling fix */
+#services.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  background-color: #f8f8f8;
+  border-top: 5px solid var(--primary);
+  margin-bottom: 3rem;
+}
+
+#services.services .card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+#services.services .card:hover {
+  transform: translateY(-5px);
+}
+
+/* Fix mobile layout issues */
+@media (max-width: 767px) {
+  /* Fix dark mode toggle overlapping with contact button */
+  #dark-mode-toggle {
+    top: 80px !important;
+    right: 20px !important;
+    z-index: 10000 !important;
+  }
+  
+  /* Add spacing between services and about us sections */
+  #services.services {
+    margin-bottom: 3rem;
+    padding: 2rem 1rem;
+  }
+  
+  /* Ensure proper section spacing */
+  section {
+    position: relative;
+    z-index: 1;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  section + section {
+    margin-top: 2rem;
+  }
+  
+  /* Fix overlapping sections */
+  #about-us {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    background-color: var(--gray-100);
+    z-index: 2;
+  }
+  
+  /* Adjust navigation items in mobile view */
+  #cs-navigation {
+    z-index: 9999;
+  }
+  
+  #cs-navigation .cs-ul {
+    z-index: 9999;
+  }
+  
+  /* Fix services overlapping */
+  #services-1354 {
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Make contact form more compact on mobile */
+  #cs-contact {
+    padding: 2rem 1rem;
+  }
+  
+  #cs-contact #cs-form {
+    padding: 1.5rem;
+  }
+}
+
+/* Tablet - 768px */
+@media (min-width: 48rem) {
+  #cs-contact #cs-form .cs-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  #cs-contact #cs-form .cs-button-solid {
+    max-width: 250px;
+    display: block;
+    margin: 2rem auto 0;
+  }
+}
+
+/* Dark mode fixes */
+@media (min-width: 0rem) {
+  body.dark-mode #cs-contact {
+    background-color: var(--dark);
+  }
+  
+  body.dark-mode #cs-contact #cs-form {
+    background-color: var(--medium);
+  }
+  
+  body.dark-mode #cs-contact .cs-title,
+  body.dark-mode #cs-contact .cs-text,
+  body.dark-mode #cs-contact #cs-form label {
+    color: var(--bodyTextColorWhite);
+  }
+  
+  body.dark-mode #cs-contact #cs-form input,
+  body.dark-mode #cs-contact #cs-form textarea,
+  body.dark-mode #cs-contact #cs-form select {
+    background-color: var(--dark);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--bodyTextColorWhite);
+  }
+} 
