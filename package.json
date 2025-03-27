@@ -11,7 +11,9 @@
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
         "watch:cms": "npx decap-server",
         "start": "del-cli ./public --force && npm-run-all --parallel watch:*",
-        "build": "run-s build:*"
+        "build": "run-s build:*",
+        "optimize-images": "node -e \"require('./sharp.config.js').processAllImages()\"",
+        "generate-favicons": "node generate-favicons.js"
     },
     "repository": {
         "type": "git",

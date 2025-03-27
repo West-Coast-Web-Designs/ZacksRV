@@ -25,25 +25,16 @@ eleventyNavigation:
 
     <section id="int-hero">
         <h1 id="home-h">Contact Us</h1>
-        <picture>
-            <source
-                media="(max-width: 600px)"
-                srcset="/assets/images/RV 1-m.jpg"
-            />
-            <source
-                media="(min-width: 601px)"
-                srcset="/assets/images/RV 1.jpg"
-            />
-            <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/images/RV 1.jpg"
-                alt="kitchen cabinets"
-                loading="eager"
-                width="2500"
-                height="1667"
-            />
-        </picture>
+        {% include "components/optimized-image.html",
+            src: "RV 1",
+            alt: "Contact RV Service",
+            width: 2500,
+            height: 1667,
+            loading: "eager",
+            sizes: "100vw",
+            pictureClass: "hero-background",
+            class: "hero-image"
+        %}
     </section>
                                 
     <!-- ============================================ -->
@@ -112,9 +103,8 @@ eleventyNavigation:
                 <!--Address-->
                 <span class="cs-header">Address</span>
                 <a class="cs-link" href="{{ client.address.mapLink }}">
-                    {{ client.address.lineOne }},
-                    <br />
-                    {{ client.address.lineTwo }},
+                    {{ client.address.lineOne }}
+                    {{ client.address.lineTwo }}
                     <br />
                     <span class="cs-block">
                         {{ client.address.city }}
