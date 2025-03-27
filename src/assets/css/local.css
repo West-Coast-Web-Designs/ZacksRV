@@ -827,7 +827,7 @@ body.dark-mode #about-us .cs-number {
     #about-us .cs-right {
         width: 100%;
         max-width: 40.625rem;
-        margin-top: -2rem;
+        /* margin-top: -2rem; */
     }
 
     #about-us .cs-stats-group {
@@ -1101,58 +1101,7 @@ body.dark-mode #about-us .cs-number {
     position: relative;  /* Add this to ensure proper stacking context */
 }
 
-#cs-navigation .cs-logo {
-    width: 150px !important;  /* Fixed width */
-    height: 65px !important;  /* Fixed height */
-    margin: 0 !important;
-    padding: 0 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    position: fixed !important;  /* Force fixed positioning */
-    left: 20px !important;
-    top: 10px !important;  /* Fixed top position */
-    transform: none !important;  /* Remove any transforms */
-    z-index: 10000 !important;  /* Ensure it stays on top */
-}
-
-#cs-navigation .cs-logo img {
-    width: 100% !important;
-    height: 100% !important;
-    max-height: 65px !important;
-    object-fit: contain !important;
-    object-position: center !important;
-}
-
-/* Override any responsive styles */
-@media only screen and (min-width: 64rem) {
-    #cs-navigation .cs-logo {
-        width: 150px !important;
-        height: 65px !important;
-        max-width: none !important;
-        position: fixed !important;
-        left: 20px !important;
-        top: 10px !important;
-        transform: none !important;
-    }
-}
-
-@media only screen and (max-width: 63.9375rem) {
-    #cs-navigation .cs-logo {
-        width: 150px !important;
-        height: 65px !important;
-        max-width: none !important;
-        position: fixed !important;
-        left: 20px !important;
-        top: 10px !important;
-        transform: none !important;
-    }
-}
-
 /* Ensure the logo container doesn't affect layout flow */
-#cs-navigation .cs-container {
-    padding-left: 170px;  /* Add space for the fixed logo */
-}
 
 #reviews .cs-review-group {
     width: 100%;
