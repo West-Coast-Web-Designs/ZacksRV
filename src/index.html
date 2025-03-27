@@ -78,7 +78,87 @@ eleventyNavigation:
     <!--                    Hero                      -->
     <!-- ============================================ -->
 
-    <section id="hero">
+    <section id="hero-229">
+        <div class="cs-container">
+            <div class="cs-flex-group">
+                <span class="cs-topper">mountain hiking society</span>
+                <h1 class="cs-title">Explore the World with Exciting People</h1>
+                <p class="cs-text">
+                    Tincidunt lobortis feugiat vivamus at augue eget arcu dictum
+                    varius. Nibh tortor id aliquet lectus proin nibh
+                    condimentum.
+                </p>
+                <div class="cs-button-group">
+                    <a href="/services" class="cs-button-solid">Our Services</a>
+                    <a href="/contact" class="cs-button-transparent"
+                        >Schedule Service</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Image -->
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Road.jpg' | resize({ width: 640, height: 1500, position: 'attention', fit: 'inside' }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Road.jpg' | resize({ width: 640, height: 1500, position: 'attention', fit: 'inside' }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Road.jpg' | resize({ width: 640, height: 1500, position: 'attention', fit: 'inside' }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <!--Tablet Image-->
+            <source
+                media="(min-width: 601px)"
+                srcset="
+                    {% getUrl '/assets/images/Road.jpg' | resize({ width: 2250, height: 1500, position: 'attention', fit: 'inside' }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(min-width: 601px)"
+                srcset="
+                    {% getUrl '/assets/images/Road.jpg' | resize({ width: 2250, height: 1500, position: 'attention', fit: 'inside' }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(min-width: 601px)"
+                srcset="
+                    {% getUrl '/assets/images/Road.jpg' | resize({ width: 2250, height: 1500, position: 'attention', fit: 'inside' }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <img
+                src="{% getUrl '/assets/images/Road.jpg' | resize({ width: 2250, height: 1500, position: 'attention', fit: 'inside' }) | jpeg %}"
+                alt="traveling rv"
+                width="2250"
+                height="1500"
+                decoding="async"
+                aria-hidden="true"
+            />
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                    Hero                      -->
+    <!-- ============================================ -->
+
+    {# <section id="hero">
         <div class="cs-container">
             <div class="cs-flex-group">
                 <span class="cs-topper">Professional RV Maintenance & Repair</span>
@@ -113,7 +193,7 @@ eleventyNavigation:
                 loading="eager"
             />
         </picture>
-    </section>
+    </section> #}
     <!-- ============================================ -->
     <!--                    Services                  -->
     <!-- ============================================ -->
@@ -122,48 +202,111 @@ eleventyNavigation:
         <div class="cs-container">
             <div class="cs-content">
                 <span class="cs-topper">Our Services</span>
-                <h2 class="cs-title">Complete RV Care & Maintenance Solutions</h2>
+                <h2 class="cs-title">
+                    Complete RV Care & Maintenance Solutions
+                </h2>
             </div>
             <ul class="cs-card-group">
                 <li class="cs-item">
                     <a href="/services" class="cs-link">
-                        <h3 class="cs-h3"><span class="cs-span">Slide Out</span> Repairs</h3>
+                        <h3 class="cs-h3">
+                            <span class="cs-span">Slide Out</span> Repairs
+                        </h3>
                     </a>
                     <picture class="cs-background">
-                        <source media="(max-width: 600px)" srcset="/assets/images/Slide.jpeg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/Slide.jpeg">
-                        <img decoding="async" src="/assets/images/Slide.jpeg" alt="RV engine maintenance" width="305" height="305" aria-hidden="true">
+                        <source
+                            media="(max-width: 600px)"
+                            srcset="/assets/images/Slide.jpeg"
+                        />
+                        <source
+                            media="(min-width: 601px)"
+                            srcset="/assets/images/Slide.jpeg"
+                        />
+                        <img
+                            decoding="async"
+                            src="/assets/images/Slide.jpeg"
+                            alt="RV engine maintenance"
+                            width="305"
+                            height="305"
+                            aria-hidden="true"
+                        />
                     </picture>
                 </li>
                 <li class="cs-item">
                     <a href="/services" class="cs-link">
-                        <h3 class="cs-h3"><span class="cs-span">Appliance</span> Repairs</h3>
+                        <h3 class="cs-h3">
+                            <span class="cs-span">Appliance</span> Repairs
+                        </h3>
                     </a>
                     <picture class="cs-background">
-                        <source media="(max-width: 600px)" srcset="/assets/images/Appliance.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/Appliance.jpg">
-                        <img decoding="async" src="/assets/images/Appliance.jpg" alt="RV interior systems" width="305" height="305" aria-hidden="true">
+                        <source
+                            media="(max-width: 600px)"
+                            srcset="/assets/images/Appliance.jpg"
+                        />
+                        <source
+                            media="(min-width: 601px)"
+                            srcset="/assets/images/Appliance.jpg"
+                        />
+                        <img
+                            decoding="async"
+                            src="/assets/images/Appliance.jpg"
+                            alt="RV interior systems"
+                            width="305"
+                            height="305"
+                            aria-hidden="true"
+                        />
                     </picture>
                 </li>
                 <li class="cs-item">
                     <a href="/services" class="cs-link">
-                        <h3 class="cs-h3"><span class="cs-span">Tank</span> Cleaning</h3>
+                        <h3 class="cs-h3">
+                            <span class="cs-span">Tank</span> Cleaning
+                        </h3>
                     </a>
                     <picture class="cs-background">
-                        <source media="(max-width: 600px)" srcset="/assets/images/Tank.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/Tank.jpg">
-                        <img decoding="async" src="/assets/images/Tank.jpg" alt="RV electrical systems" width="305" height="305" aria-hidden="true">
+                        <source
+                            media="(max-width: 600px)"
+                            srcset="/assets/images/Tank.jpg"
+                        />
+                        <source
+                            media="(min-width: 601px)"
+                            srcset="/assets/images/Tank.jpg"
+                        />
+                        <img
+                            decoding="async"
+                            src="/assets/images/Tank.jpg"
+                            alt="RV electrical systems"
+                            width="305"
+                            height="305"
+                            aria-hidden="true"
+                        />
                     </picture>
                 </li>
                 <li class="cs-item">
                     <a href="/services" class="cs-link">
-                        <h3 class="cs-h3"><span class="cs-span">Exterior</span> Maintenance</h3>
+                        <h3 class="cs-h3">
+                            <span class="cs-span">Exterior</span> Maintenance
+                        </h3>
                     </a>
                     <picture class="cs-background">
-                        <source media="(max-width: 600px)" srcset="/assets/images/EXT.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/EXT.jpg">
-                        <img decoding="async" src="/assets/images/EXT.jpg" alt="RV exterior maintenance" width="305" height="305" aria-hidden="true">
+                        <source
+                            media="(max-width: 600px)"
+                            srcset="/assets/images/EXT.jpg"
+                        />
+                        <source
+                            media="(min-width: 601px)"
+                            srcset="/assets/images/EXT.jpg"
+                        />
+                        <img
+                            decoding="async"
+                            src="/assets/images/EXT.jpg"
+                            alt="RV exterior maintenance"
+                            width="305"
+                            height="305"
+                            aria-hidden="true"
+                        />
                     </picture>
+                </li>
             </ul>
         </div>
     </section>
@@ -180,39 +323,66 @@ eleventyNavigation:
                 <div class="cs-flex-wrapper">
                     <div class="cs-left">
                         <p class="cs-text">
-                            With decades of experience in RV repair and maintenance, our team of certified 
-                            technicians brings expertise and dedication to every job. We understand that your RV is 
-                            more than just a vehicle – it's your home away from home.
+                            With decades of experience in RV repair and
+                            maintenance, our team of certified technicians
+                            brings expertise and dedication to every job. We
+                            understand that your RV is more than just a vehicle
+                            – it's your home away from home.
                         </p>
                         <p class="cs-text">
-                            That's why we treat every repair and maintenance task with the utmost care and attention 
-                            to detail. Our commitment to excellence ensures your RV receives the highest quality service 
-                            every time.
+                            That's why we treat every repair and maintenance
+                            task with the utmost care and attention to detail.
+                            Our commitment to excellence ensures your RV
+                            receives the highest quality service every time.
                         </p>
-                        <a href="/about" class="cs-button-solid">Learn More About Us</a>
+                        <a href="/about" class="cs-button-solid"
+                            >Learn More About Us</a
+                        >
                     </div>
                     <div class="cs-right">
                         <div class="cs-stats-group">
                             <div class="cs-stat-box">
                                 <span class="cs-number">20+</span>
-                                <span class="cs-stat-text">Years Experience</span>
-                                <p class="cs-stat-desc">Serving RV owners since 2003</p>
+                                <span class="cs-stat-text"
+                                    >Years Experience</span
+                                >
+                                <p class="cs-stat-desc">
+                                    Serving RV owners since 2003
+                                </p>
                             </div>
                             <div class="cs-stat-box">
                                 <span class="cs-number">1000+</span>
                                 <span class="cs-stat-text">RVs Serviced</span>
-                                <p class="cs-stat-desc">Trusted by countless owners</p>
+                                <p class="cs-stat-desc">
+                                    Trusted by countless owners
+                                </p>
                             </div>
                             <div class="cs-stat-box">
                                 <span class="cs-number">100%</span>
                                 <span class="cs-stat-text">Satisfaction</span>
-                                <p class="cs-stat-desc">Customer satisfaction guaranteed</p>
+                                <p class="cs-stat-desc">
+                                    Customer satisfaction guaranteed
+                                </p>
                             </div>
                         </div>
                         <picture class="cs-picture">
-                            <source media="(max-width: 600px)" srcset="/assets/images/about-m.jpg">
-                            <source media="(min-width: 601px)" srcset="/assets/images/about.jpg">
-                            <img aria-hidden="true" decoding="async" src="/assets/images/about.jpg" alt="RV technician at work" loading="lazy" width="400" height="400">
+                            <source
+                                media="(max-width: 600px)"
+                                srcset="/assets/images/about-m.jpg"
+                            />
+                            <source
+                                media="(min-width: 601px)"
+                                srcset="/assets/images/about.jpg"
+                            />
+                            <img
+                                aria-hidden="true"
+                                decoding="async"
+                                src="/assets/images/about.jpg"
+                                alt="RV technician at work"
+                                loading="lazy"
+                                width="400"
+                                height="400"
+                            />
                         </picture>
                     </div>
                 </div>
@@ -238,7 +408,8 @@ eleventyNavigation:
             </picture>
             <h2>Preventive Maintenance</h2>
             <p>
-                Regular maintenance checks and services to keep your RV in optimal condition and prevent costly repairs.
+                Regular maintenance checks and services to keep your RV in
+                optimal condition and prevent costly repairs.
             </p>
         </div>
         <div class="card">
@@ -254,7 +425,8 @@ eleventyNavigation:
             </picture>
             <h2>System Upgrades</h2>
             <p>
-                Modern upgrades for electrical, plumbing, and comfort systems to enhance your RV experience.
+                Modern upgrades for electrical, plumbing, and comfort systems to
+                enhance your RV experience.
             </p>
         </div>
         <div class="card">
@@ -270,7 +442,8 @@ eleventyNavigation:
             </picture>
             <h2>Emergency Repairs</h2>
             <p>
-                Fast, reliable repair services for all RV systems and components when you need them most.
+                Fast, reliable repair services for all RV systems and components
+                when you need them most.
             </p>
         </div>
     </section>
@@ -284,8 +457,10 @@ eleventyNavigation:
             <span class="cs-topper">Our Reviews</span>
             <h2 class="cs-title">What Our Customers Say</h2>
             <p class="cs-text">
-                Hear from our satisfied customers about their experience with our RV repair and maintenance services. 
-                We take pride in delivering exceptional service that keeps our clients coming back.
+                Hear from our satisfied customers about their experience with
+                our RV repair and maintenance services. We take pride in
+                delivering exceptional service that keeps our clients coming
+                back.
             </p>
             <ul class="cs-card-group">
                 <!-- Review 1 -->
@@ -301,8 +476,10 @@ eleventyNavigation:
                         height="80"
                     />
                     <p class="cs-item-p">
-                        "Zack did an amazing job servicing our RV's water heater. He was thorough and professional. 
-                        The upgrade to our setup has made such a difference in our camping experience!"
+                        "Zack did an amazing job servicing our RV's water
+                        heater. He was thorough and professional. The upgrade to
+                        our setup has made such a difference in our camping
+                        experience!"
                     </p>
                     <span class="cs-reviewer">
                         Robert Johnson
@@ -332,9 +509,10 @@ eleventyNavigation:
                         height="80"
                     />
                     <p class="cs-item-p">
-                        "Had an emergency repair needed during our vacation and Zack came through big time! 
-                        Fixed our AC unit quickly and got us back on the road. Fair pricing and excellent service. 
-                        Highly recommend!"
+                        "Had an emergency repair needed during our vacation and
+                        Zack came through big time! Fixed our AC unit quickly
+                        and got us back on the road. Fair pricing and excellent
+                        service. Highly recommend!"
                     </p>
                     <span class="cs-reviewer">
                         Sarah Martinez
@@ -370,18 +548,23 @@ eleventyNavigation:
             <span class="cs-topper">Schedule Service</span>
             <h2 class="cs-title">Get Your RV Service Started Today</h2>
             <p class="cs-text">
-                Don't wait until small issues become big problems. Our certified RV technicians 
-                are ready to help keep your home on wheels in perfect condition.
+                Don't wait until small issues become big problems. Our certified
+                RV technicians are ready to help keep your home on wheels in
+                perfect condition.
             </p>
             <div class="cs-contact-group">
                 <div class="cs-contact-info">
                     <div class="cs-contact-item">
                         <p class="cs-phone">📞 (555) 123-4567</p>
                         <p class="cs-hours">⏰ Mon-Fri: 8:00 AM - 5:00 PM</p>
-                        <p class="cs-address">📍 1234 RV Service Lane, Your City, ST 12345</p>
+                        <p class="cs-address">
+                            📍 1234 RV Service Lane, Your City, ST 12345
+                        </p>
                     </div>
                     <div class="cs-contact-cta">
-                        <p class="cs-cta-text">24/7 Emergency RV Service Available</p>
+                        <p class="cs-cta-text">
+                            24/7 Emergency RV Service Available
+                        </p>
                     </div>
                 </div>
             </div>
@@ -394,45 +577,92 @@ eleventyNavigation:
 
     <section id="contact-form" class="section">
         <div class="cs-container">
-            <form id="cs-form-home" name="RV Service Request - Home" method="post" class="cs-form">
+            <form
+                id="cs-form-home"
+                name="RV Service Request - Home"
+                method="post"
+                class="cs-form"
+            >
                 <div class="cs-content">
                     <span class="cs-topper">Get Started</span>
                     <h2 class="cs-title">Request Service Now</h2>
                     <p class="cs-text">
-                        Fill out this quick form and we'll get back to you within 24 hours to schedule your service.
+                        Fill out this quick form and we'll get back to you
+                        within 24 hours to schedule your service.
                     </p>
                 </div>
                 <div class="cs-form-content">
                     <label class="cs-label">
                         Name
-                        <input required type="text" id="name-home" name="name" placeholder="Your Name" class="cs-input"/>
+                        <input
+                            required
+                            type="text"
+                            id="name-home"
+                            name="name"
+                            placeholder="Your Name"
+                            class="cs-input"
+                        />
                     </label>
                     <label class="cs-label">
                         Phone Number
-                        <input required type="tel" id="phone-home" name="phone" placeholder="Your Phone Number" class="cs-input"/>
+                        <input
+                            required
+                            type="tel"
+                            id="phone-home"
+                            name="phone"
+                            placeholder="Your Phone Number"
+                            class="cs-input"
+                        />
                     </label>
                     <label class="cs-label">
                         Email
-                        <input required type="email" id="email-home" name="email" placeholder="Your Email Address" class="cs-input"/>
+                        <input
+                            required
+                            type="email"
+                            id="email-home"
+                            name="email"
+                            placeholder="Your Email Address"
+                            class="cs-input"
+                        />
                     </label>
                     <label class="cs-label">
                         Service Needed
-                        <select required id="service-type-home" name="service-type" class="cs-input" style="height: 3.5rem;">
+                        <select
+                            required
+                            id="service-type-home"
+                            name="service-type"
+                            class="cs-input"
+                            style="height: 3.5rem;"
+                        >
                             <option value="">Select Service Type</option>
                             <option value="General">General Repair</option>
                             <option value="Slide Out">Slide Out Repair</option>
                             <option value="Winterization">Winterization</option>
-                            <option value="Appliance">Appliance Services</option>
-                            <option value="electrical">Electrical Systems</option>
-                            <option value="maintenance">Routine Maintenance</option>
+                            <option value="Appliance">
+                                Appliance Services
+                            </option>
+                            <option value="electrical">
+                                Electrical Systems
+                            </option>
+                            <option value="maintenance">
+                                Routine Maintenance
+                            </option>
                             <option value="emergency">Emergency Repair</option>
                         </select>
                     </label>
                     <label class="cs-label cs-label-message">
                         Message
-                        <textarea required name="Message" id="message-home" placeholder="Please describe your service needs..." class="cs-input"></textarea>
+                        <textarea
+                            required
+                            name="Message"
+                            id="message-home"
+                            placeholder="Please describe your service needs..."
+                            class="cs-input"
+                        ></textarea>
                     </label>
-                    <button class="cs-button-solid cs-submit" type="submit">Submit Request</button>
+                    <button class="cs-button-solid cs-submit" type="submit">
+                        Submit Request
+                    </button>
                 </div>
             </form>
         </div>
@@ -446,42 +676,41 @@ eleventyNavigation:
                 border-radius: 0.5rem;
                 box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
             }
-            
+
             .cs-form-content {
                 display: flex;
                 flex-direction: column;
                 gap: 1.5rem;
                 margin-top: 2rem;
             }
-            
+
             .cs-label {
                 display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
                 font-weight: bold;
             }
-            
+
             .cs-input {
                 padding: 0.75rem;
                 border: 1px solid #ccc;
                 border-radius: 0.25rem;
                 font-size: 1rem;
             }
-            
+
             textarea.cs-input {
                 min-height: 150px;
                 resize: vertical;
             }
-            
+
             .cs-submit {
                 margin-top: 1rem;
             }
-            
+
             #contact-form {
                 background: #f7f7f7;
                 padding: 5rem 1rem;
             }
         </style>
     </section>
-
 {% endblock %}
