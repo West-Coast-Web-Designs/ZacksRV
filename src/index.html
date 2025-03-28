@@ -93,7 +93,7 @@ eleventyNavigation:
         </div>
 
         <!-- Background Image -->
-        {% include "components/optimized-image.html",
+        {% include "components/optimized-image.html" with {
             src: "Road",
             alt: "traveling rv",
             width: 2250,
@@ -103,7 +103,7 @@ eleventyNavigation:
             pictureClass: "cs-picture",
             class: "hero-image",
             decoding: "async"
-        %}
+        } %}
     </section>
 
     <!-- ============================================ -->
