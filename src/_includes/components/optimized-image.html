@@ -1,92 +1,31 @@
-<!-- 
-  Optimized Image Component
-  Usage: 
-  
-  Example:
-    {% include "components/optimized-image.html", 
-      src: "image-name", 
-      alt: "Alt text",
-      width: 1200,
-      height: 800,
-      loading: "lazy",
-      sizes: "(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-    %}  
-  
-  Parameters:
-  - src: Base image name without extension (required)
-  - alt: Alt text for the image (required)
-  - width: Original image width (required) - should be 2x the display size
-  - height: Original image height (required) - should be 2x the display size
-  - loading: "lazy" or "eager" (default: "lazy")
-  - sizes: Responsive sizes attribute (default: "100vw")
-  - class: Additional CSS classes for img tag
-  - pictureClass: CSS classes for the picture element
-  - decoding: Image decoding attribute (default: "async")
-  - eager: Set to true to make image load immediately (default: false)
--->
-
-{% set loading = loading | default("lazy") %}
-{% set sizes = sizes | default("100vw") %}
-{% set eager = eager | default(false) %}
-{% set decoding = decoding | default("async") %}
-{% set imgClass = class | default("") %}
-
-<!-- Define breakpoints for responsive images -->
-{% set breakpoints = {
-  "mobile": 600,
-  "tablet": 1024,
-  "desktop": 1920
-} %}
-
-<picture class="{{ pictureClass | default('') }}">
-  <!-- AVIF format - best compression but less browser support -->
+{% macro optimizedImage(src, alt, width, height, loading="lazy", sizes="100vw", pictureClass="", class="", decoding="async") %}
+<picture{% if pictureClass %} class="{{ pictureClass }}"{% endif %}>
   <source
     type="image/avif"
-    srcset="{{ '/assets/images/' + src + '-600.avif' }} 600w,
-            {{ '/assets/images/' + src + '-1024.avif' }} 1024w,
-            {{ '/assets/images/' + src + '-1920.avif' }} 1920w"
+    srcset="/assets/images/{{ src | replace('.jpg', '') | replace('.jpeg', '') | replace('.png', '') }}-m.avif 600w,
+            /assets/images/{{ src | replace('.jpg', '') | replace('.jpeg', '') | replace('.png', '') }}-t.avif 1024w,
+            /assets/images/{{ src | replace('.jpg', '') | replace('.jpeg', '') | replace('.png', '') }}.avif"
     sizes="{{ sizes }}"
   />
-  
-  <!-- WebP format - good compression with wide browser support -->
   <source
     type="image/webp"
-    srcset="{{ '/assets/images/' + src + '-600.webp' }} 600w,
-            {{ '/assets/images/' + src + '-1024.webp' }} 1024w,
-            {{ '/assets/images/' + src + '-1920.webp' }} 1920w"
+    srcset="/assets/images/{{ src | replace('.jpg', '') | replace('.jpeg', '') | replace('.png', '') }}-m.webp 600w,
+            /assets/images/{{ src | replace('.jpg', '') | replace('.jpeg', '') | replace('.png', '') }}-t.webp 1024w,
+            /assets/images/{{ src | replace('.jpg', '') | replace('.jpeg', '') | replace('.png', '') }}.webp"
     sizes="{{ sizes }}"
   />
-  
-  <!-- Original format (JPG/PNG) for fallback -->
-  {% if src | endsWith(".png") %}
-    <!-- PNG fallback -->
-    <img
-      src="{{ '/assets/images/' + src }}"
-      srcset="{{ '/assets/images/' + src + '-600.png' }} 600w,
-              {{ '/assets/images/' + src + '-1024.png' }} 1024w,
-              {{ '/assets/images/' + src + '-1920.png' }} 1920w"
-      alt="{{ alt }}"
-      width="{{ width }}"
-      height="{{ height }}"
-      loading="{{ loading }}"
-      decoding="{{ decoding }}"
-      class="{{ imgClass }}"
-      sizes="{{ sizes }}"
-    />
-  {% else %}
-    <!-- JPG fallback -->
-    <img
-      src="{{ '/assets/images/' + src }}"
-      srcset="{{ '/assets/images/' + src + '-600.jpg' }} 600w,
-              {{ '/assets/images/' + src + '-1024.jpg' }} 1024w,
-              {{ '/assets/images/' + src + '-1920.jpg' }} 1920w"
-      alt="{{ alt }}"
-      width="{{ width }}"
-      height="{{ height }}"
-      loading="{{ loading }}"
-      decoding="{{ decoding }}"
-      class="{{ imgClass }}"
-      sizes="{{ sizes }}"
-    />
-  {% endif %}
-</picture> 
+  <img
+    src="/assets/images/{{ src }}"
+    srcset="/assets/images/{{ src | replace('.jpg', '') | replace('.jpeg', '') | replace('.png', '') }}-m.jpg 600w,
+            /assets/images/{{ src | replace('.jpg', '') | replace('.jpeg', '') | replace('.png', '') }}-t.jpg 1024w,
+            /assets/images/{{ src }}"
+    alt="{{ alt }}"
+    width="{{ width }}"
+    height="{{ height }}"
+    loading="{{ loading }}"
+    decoding="{{ decoding }}"
+    {% if class %}class="{{ class }}"{% endif %}
+    sizes="{{ sizes }}"
+  />
+</picture>
+{% endmacro %} 

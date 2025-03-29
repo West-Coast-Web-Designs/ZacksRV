@@ -21,16 +21,8 @@ eleventyNavigation:
 
     <section id="int-hero">
         <h1 id="home-h">About Us</h1>
-        {% include "components/optimized-image.html",
-            src: "Oregon.jpg",
-            alt: "Van",
-            width: 2500,
-            height: 1667,
-            loading: "eager",
-            sizes: "100vw",
-            pictureClass: "hero-background",
-            class: "hero-image"
-        %}
+        {% import "components/optimized-image.html" as image with context %}
+        {{ image.optimizedImage("Oregon.jpg", "Van", 2500, 1667, "eager", "100vw", "hero-background", "", "async") }}
     </section>
 
     <!-- ============================================ -->
@@ -42,26 +34,12 @@ eleventyNavigation:
             <!-- Left Image Section -->
             <div class="cs-left">
                 <div class="cs-picture cs-picture1">
-                    {% include "components/optimized-image.html",
-                        src: "desert.jpg",
-                        alt: "Desert",
-                        width: 400,
-                        height: 563,
-                        loading: "lazy",
-                        sizes: "(max-width: 600px) 100vw, 400px",
-                        class: "sbs-image"
-                    %}
+                    {% import "components/optimized-image.html" as image with context %}
+                    {{ image.optimizedImage("desert.jpg", "Desert", 400, 563, "lazy", "(max-width: 600px) 100vw, 400px", "", "sbs-image") }}
                 </div>
                 <div class="cs-picture cs-picture2">
-                    {% include "components/optimized-image.html",
-                        src: "France.jpg",
-                        alt: "France",
-                        width: 400,
-                        height: 563,
-                        loading: "lazy",
-                        sizes: "(max-width: 600px) 100vw, 400px",
-                        class: "sbs-image"
-                    %}
+                    {% import "components/optimized-image.html" as image with context %}
+                    {{ image.optimizedImage("France.jpg", "France", 400, 563, "lazy", "(max-width: 600px) 100vw, 400px", "", "sbs-image") }}
                 </div>
             </div>
             <!-- Right Content Section-->

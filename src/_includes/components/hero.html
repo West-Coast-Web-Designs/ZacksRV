@@ -22,15 +22,16 @@
     </div>
 
     <!-- Background Image -->
-    {% include "components/optimized-image.html",
-        src: heroContent.desktopImage | replace("/assets/images/", "") | replace(".jpg", "") | replace(".png", ""),
-        alt: heroContent.imageAlt,
-        width: 3600,
-        height: 2400,
-        loading: "eager",
-        sizes: "(max-width: 600px) 100vw, 100vw",
-        pictureClass: "cs-picture",
-        decoding: "async",
-        eager: true
-    %}
+    {% import "components/optimized-image.html" as image with context %}
+    {{ image.optimizedImage(
+        heroContent.desktopImage,
+        heroContent.imageAlt,
+        3600,
+        2400,
+        "eager",
+        "(max-width: 600px) 100vw, 100vw",
+        "cs-picture",
+        "",
+        "async"
+    ) }}
 </section> 

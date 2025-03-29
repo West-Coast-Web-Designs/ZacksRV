@@ -1,5 +1,5 @@
 ---
-title: "Contact | Code Stitch Web Designs"
+title: "Contact | Parson's Mobile Service"
 description: "Meta description for the page"
 preloadImg: "/assets/images/cabinets2.jpg"
 permalink: "contact/"
@@ -25,16 +25,8 @@ eleventyNavigation:
 
     <section id="int-hero">
         <h1 id="home-h">Contact Us</h1>
-        {% include "components/optimized-image.html",
-            src: "RV 1",
-            alt: "Contact RV Service",
-            width: 2500,
-            height: 1667,
-            loading: "eager",
-            sizes: "100vw",
-            pictureClass: "hero-background",
-            class: "hero-image"
-        %}
+        {% import "components/optimized-image.html" as image with context %}
+        {{ image.optimizedImage("RV 1.jpg", "Contact RV Service", 2500, 1667, "eager", "100vw", "hero-background", "hero-image", "async") }}
     </section>
                                 
     <!-- ============================================ -->
