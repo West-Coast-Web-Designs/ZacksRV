@@ -7,6 +7,7 @@
   :root {
     --primary: #6b966b;
     --primaryLight: #8aad8a;
+    --primaryDark: #4a6b4a;
     --secondary: #38302E;
     --secondaryLight: #001f3f;
     --tertiary: #F9EAE1;
@@ -41,7 +42,7 @@
     font-size: var(--topperFontSize);
     line-height: 1.2em;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--primaryDark);
     text-align: inherit;
   }
   .cs-title {
@@ -75,7 +76,7 @@
     font-size: 1rem;
     line-height: 3.125em;
     font-weight: bold;
-    color: var(--white);
+    color: var(--grayDark);
     transition: color 0.3s;
     transition-delay: 0.1s;
     text-align: center;
