@@ -10,24 +10,60 @@
             With Us Today
         </h2>
         <p>
-            Ready to transform your RV experience? Let our expert technicians take care of all your maintenance and repair needs.
+            Ready to transform your RV experience? Let our expert technicians
+            take care of all your maintenance and repair needs.
         </p>
         <a href="/contact" class="cs-button-solid">Schedule Service</a>
     </div>
     <picture>
         <source
             media="(max-width: 600px)"
-            srcset="/assets/images/RV 1-m.jpg"
+            srcset="
+                {% getUrl '/assets/images/RV 1.jpg' | resize({ width: 1200, height: 772, position: 'attention' }) | avif %}
+            "
+            type="image/avif"
+        />
+        <source
+            media="(max-width: 600px)"
+            srcset="
+                {% getUrl '/assets/images/RV 1.jpg' | resize({ width: 1200, height: 772, position: 'attention' }) | webp %}
+            "
+            type="image/webp"
+        />
+        <source
+            media="(max-width: 600px)"
+            srcset="
+                {% getUrl '/assets/images/RV 1.jpg' | resize({ width: 1200, height: 772, position: 'attention' }) | jpeg %}
+            "
+            type="image/jpeg"
+        />
+        <!--Tablet and above Image-->
+        <source
+            media="(min-width: 601px)"
+            srcset="
+                {% getUrl '/assets/images/RV 1.jpg' | resize({ width: 2500, height: 1667, position: 'attention' }) | avif %}
+            "
+            type="image/avif"
         />
         <source
             media="(min-width: 601px)"
-            srcset="/assets/images/RV 1.jpg"
+            srcset="
+                {% getUrl '/assets/images/RV 1.jpg' | resize({ width: 2500, height: 1667, position: 'attention' }) | webp %}
+            "
+            type="image/webp"
+        />
+        <source
+            media="(min-width: 601px)"
+            srcset="
+                {% getUrl '/assets/images/RV 1.jpg' | resize({ width: 2500, height: 1667, position: 'attention' }) | jpeg %}
+            "
+            type="image/jpeg"
         />
         <img
             aria-hidden="true"
             decoding="async"
             src="/assets/images/RV 1.jpg"
-            alt="kitchen cabinets"
+            alt="rv parked"
             loading="lazy"
             width="2500"
             height="1667"
