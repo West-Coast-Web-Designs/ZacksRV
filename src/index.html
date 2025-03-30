@@ -84,12 +84,16 @@ eleventyNavigation:
                 <span class="cs-topper">Expert Mobile RV Service</span>
                 <h1 class="cs-title">Professional RV Repair & Maintenance</h1>
                 <p class="cs-text">
-                    Comprehensive mobile RV repair and maintenance services. We come to you, 
-                    making RV care convenient and hassle-free.
+                    Comprehensive mobile RV repair and maintenance services. We
+                    come to you, making RV care convenient and hassle-free.
                 </p>
                 <div class="cs-button-group">
-                    <a href="/contact" class="cs-button-solid">Schedule Service</a>
-                    <a href="/services" class="cs-button-transparent">Our Services</a>
+                    <a href="/contact" class="cs-button-solid"
+                        >Schedule Service</a
+                    >
+                    <a href="/services" class="cs-button-transparent"
+                        >Our Services</a
+                    >
                 </div>
             </div>
         </div>
@@ -270,25 +274,6 @@ eleventyNavigation:
                                 </p>
                             </div>
                         </div>
-                        <picture class="cs-picture">
-                            <source
-                                media="(max-width: 600px)"
-                                srcset="/assets/images/about-m.jpg"
-                            />
-                            <source
-                                media="(min-width: 601px)"
-                                srcset="/assets/images/about.jpg"
-                            />
-                            <img
-                                aria-hidden="true"
-                                decoding="async"
-                                src="/assets/images/about.jpg"
-                                alt="RV technician at work"
-                                loading="lazy"
-                                width="400"
-                                height="400"
-                            />
-                        </picture>
                     </div>
                 </div>
             </div>
@@ -299,58 +284,110 @@ eleventyNavigation:
     <!--                  Services                    -->
     <!-- ============================================ -->
 
-    <section id="services" class="services">
-        <div class="card">
-            <picture>
-                <img
-                    aria-hidden="true"
-                    decoding="async"
-                    src="/assets/svgs/service1.svg"
-                    alt="RV Maintenance"
-                    width="48"
-                    height="48"
-                />
-            </picture>
-            <h2>Preventive Maintenance</h2>
-            <p>
-                Regular maintenance checks and services to keep your RV in
-                optimal condition and prevent costly repairs.
-            </p>
+    <section id="services-1121">
+        <div class="cs-container">
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <div class="cs-image-group">
+                        <img
+                            class="cs-icon"
+                            loading="lazy"
+                            decoding="async"
+                            src="/assets/icons/tools.svg"
+                            alt="tools"
+                            width="48"
+                            height="48"
+                        />
+                        <!--If you want to remove this background shape, add a background color to the cs-image-group so it will look good. Otherwise remove the height an width from that group so there's no extra space around the icon-->
+                        <img
+                            class="cs-graphic"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/grey-shape.svg"
+                            alt="shape"
+                            width="48"
+                            height="48"
+                        />
+                    </div>
+                    <div class="cs-flex">
+                        <h2 class="cs-h2">Preventive Maintenance</h2>
+                        <p class="cs-item-text">
+                            Regular maintenance checks and services to keep your
+                            RV in optimal condition and prevent costly repairs.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-image-group">
+                        <img
+                            class="cs-icon"
+                            loading="lazy"
+                            decoding="async"
+                            src="/assets/icons/gear.svg"
+                            alt="upgrade gear"
+                            width="48"
+                            height="48"
+                        />
+                        <img
+                            class="cs-graphic"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/grey-shape.svg"
+                            alt="shape"
+                            width="48"
+                            height="48"
+                        />
+                    </div>
+                    <div class="cs-flex">
+                        <h2 class="cs-h2">System Upgrades</h2>
+                        <p class="cs-item-text">
+                            Modern upgrades for electrical, plumbing, and
+                            comfort systems to enhance your RV experience.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-image-group">
+                        <img
+                            class="cs-icon"
+                            loading="lazy"
+                            decoding="async"
+                            src="/assets/icons/emergency.svg"
+                            alt="emergency"
+                            width="48"
+                            height="48"
+                        />
+                        <img
+                            class="cs-graphic"
+                            loading="lazy"
+                            decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/grey-shape.svg"
+                            alt="shape"
+                            width="48"
+                            height="48"
+                        />
+                    </div>
+                    <div class="cs-flex">
+                        <h2 class="cs-h2">Emergency Repairs</h2>
+                        <p class="cs-item-text">
+                            Fast, reliable repair services for all RV systems
+                            and components when you need them most.
+                        </p>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div class="card">
-            <picture>
-                <img
-                    aria-hidden="true"
-                    decoding="async"
-                    src="/assets/svgs/service2.svg"
-                    alt="RV Systems"
-                    width="48"
-                    height="48"
-                />
-            </picture>
-            <h2>System Upgrades</h2>
-            <p>
-                Modern upgrades for electrical, plumbing, and comfort systems to
-                enhance your RV experience.
-            </p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                    aria-hidden="true"
-                    decoding="async"
-                    src="/assets/svgs/service3.svg"
-                    alt="RV Repairs"
-                    width="48"
-                    height="48"
-                />
-            </picture>
-            <h2>Emergency Repairs</h2>
-            <p>
-                Fast, reliable repair services for all RV systems and components
-                when you need them most.
-            </p>
-        </div>
+        <!--SVG Waves-->
+        <img
+            class="cs-waves"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/charity-waves.svg"
+            alt="waves"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            width="1920"
+            height="616"
+        />
     </section>
 
     <!-- ============================================ -->
