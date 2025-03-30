@@ -601,10 +601,7 @@
     color: white !important;
 }
 
-/* Additional color overrides */
-#reviews .cs-item-stars {
-    filter: hue-rotate(85deg) saturate(60%);  /* Convert yellow stars to muted green */
-}
+
 
 #about-us .cs-number {
     color: var(--primary) !important;
