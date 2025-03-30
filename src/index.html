@@ -101,8 +101,61 @@ eleventyNavigation:
         </div>
 
         <!-- Background Image -->
-        {% import "components/optimized-image.html" as image with context %}
-        {{ image.optimizedImage("Road.jpg", "traveling rv", 2250, 1500, "eager", "100vw", "cs-picture", "hero-image", "async") }}
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Road.jpg' | resize({ width: 640, height: 1500, position: 'attention', fit: 'inside' }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Road.jpg' | resize({ width: 640, height: 1500, position: 'attention', fit: 'inside' }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Road.jpg' | resize({ width: 640, height: 1500, position: 'attention', fit: 'inside' }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <!--Tablet Image-->
+            <source
+                media="(min-width: 601px)"
+                srcset="
+                    {% getUrl '/assets/images/Road.jpg' | resize({ width: 2250, height: 1500, position: 'attention', fit: 'inside' }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(min-width: 601px)"
+                srcset="
+                    {% getUrl '/assets/images/Road.jpg' | resize({ width: 2250, height: 1500, position: 'attention', fit: 'inside' }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(min-width: 601px)"
+                srcset="
+                    {% getUrl '/assets/images/Road.jpg' | resize({ width: 2250, height: 1500, position: 'attention', fit: 'inside' }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <img
+                src="{% getUrl '/assets/images/Road.jpg' | resize({ width: 2250, height: 1500, position: 'attention', fit: 'inside' }) | jpeg %}"
+                alt="traveling rv"
+                width="2250"
+                height="1500"
+                decoding="async"
+                aria-hidden="true"
+            />
+        </picture>
+    </section>
     </section>
 
     <!-- ============================================ -->
