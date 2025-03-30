@@ -215,8 +215,6 @@
     width: 2rem;
     height: 2rem;
     display: block;
-    /* Convert red icons to forest dark green */
-    filter: hue-rotate(110deg) saturate(80%) brightness(0.7);
 }
 
 #services-1188 .cs-text-group {
