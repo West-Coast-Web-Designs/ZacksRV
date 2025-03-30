@@ -75,7 +75,7 @@
     font-size: 1rem;
     line-height: 3.125em;
     font-weight: bold;
-    color: #000;
+    color: var(--white);
     transition: color 0.3s;
     transition-delay: 0.1s;
     text-align: center;
