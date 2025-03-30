@@ -1,0 +1,182 @@
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-1388">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Schedule Service</span>
+            <h2 class="cs-title">Get Your RV Service Started Today</h2>
+            <p class="cs-text">
+                Don't wait until small issues become big problems. Our certified
+                RV technicians are ready to help keep your home on wheels in
+                perfect condition.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img
+                            aria-hidden="true"
+                            src="/assets/icons/telephone.svg"
+                            alt="phone icon"
+                            class="cs-icon"
+                            width="40"
+                            height="40"
+                            decoding="async"
+                        />
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Call / Text</span>
+                        <a
+                            href="tel:{{ client.phoneForTel }}
+                      "
+                            class="cs-link"
+                            >{{ client.phoneFormatted }}
+                        </a>
+                    </div>
+                </li>
+
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img
+                            aria-hidden="true"
+                            src="/assets/icons/mail.svg"
+                            alt="address icon"
+                            class="cs-icon"
+                            width="40"
+                            height="40"
+                            decoding="async"
+                        />
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Email</span>
+                        <a href="mailto:{{ client.email }}" class="cs-link"
+                            >{{ client.email }}</a
+                        >
+                    </div>
+                </li>
+
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img
+                            aria-hidden="true"
+                            src="/assets/icons/pin.svg"
+                            alt="location icon"
+                            class="cs-icon"
+                            width="40"
+                            height="40"
+                            decoding="async"
+                        />
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Current Service Area</span>
+                        <span
+                            >{{ client.location.city }},
+                            {{ client.location.state }} and surrounding
+                            areas</span
+                        >
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Form-->
+        <form
+            class="cs-form"
+            id="cs-form-1388"
+            name="Contact Form"
+            method="post"
+            netlify
+            netlify-honeypot="bot-field"
+        >
+            <h3 class="cs-h3">Contact Us</h3>
+            <label class="hidden">
+                Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+            <label class="cs-label">
+                Name *
+                <input
+                    class="cs-input"
+                    required
+                    type="text"
+                    id="name-1388"
+                    name="name"
+                    placeholder="Name"
+                />
+            </label>
+            <label class="cs-label cs-email">
+                Email *
+                <input
+                    class="cs-input"
+                    required
+                    type="email"
+                    id="email-1388"
+                    name="email"
+                    placeholder="Email"
+                />
+            </label>
+            <label class="cs-label cs-phone">
+                Phone *
+                <input
+                    class="cs-input"
+                    required
+                    type="string"
+                    id="phone-1388"
+                    name="phone"
+                    placeholder="Phone"
+                />
+            </label>
+            <label class="cs-label">
+                RV Type *
+                <select class="cs-input" id="rv-type" name="RV Type" required>
+                    <option value="5th Wheel">5th Wheel</option>
+                    <option value="Pull Trailer">Pull Trailer</option>
+                    <option value="Class A">Class A</option>
+                    <option value="Class B">Class B</option>
+                    <option value="Class C">Class C</option>
+                    <option value="Camper">Camper</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label>
+            <label class="cs-label">
+                Image
+                <span class="cs-help-text"
+                    >Upload an image of the issue (optional)</span
+                >
+                <input
+                    type="file"
+                    id="file-upload"
+                    name="RV Image"
+                    placeholder="RV Image"
+                />
+                <div
+                    class="cs-file-upload"
+                    tabindex="0"
+                    role="button"
+                    aria-haspopup="true"
+                >
+                    Upload Image
+                </div>
+                <div class="cs-file-upload-help-text" id="file-input-help-text">
+                    Choose a file (Max 15MB)
+                </div>
+            </label>
+            <label class="cs-label">
+                Message
+                <textarea
+                    class="cs-input cs-textarea"
+                    required
+                    name="Message"
+                    id="message-1388"
+                    placeholder="Write message..."
+                ></textarea>
+            </label>
+            <button
+                id="form-submit-button"
+                class="cs-button-solid cs-submit"
+                type="submit"
+            >
+                Send Message
+            </button>
+        </form>
+    </div>
+</section>

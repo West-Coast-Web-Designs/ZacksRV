@@ -3,14 +3,9 @@ module.exports = {
     email: "Zack2305@me.com",
     phoneForTel: "541-954-7564",
     phoneFormatted: "(541) 954-7564",
-    address: {
-        lineOne: "",
-        lineTwo: "",
+    location: {
         city: "Portland",
-        state: "OR",
-        zip: "",
-        country: "USA",
-        mapLink: "",
+        state: "Oregon",
     },
     socials: {
         facebook: "https://www.facebook.com/",
