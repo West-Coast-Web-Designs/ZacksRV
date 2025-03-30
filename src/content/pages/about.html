@@ -1,14 +1,16 @@
 ---
 title: "About | Parson's Mobile Service"
 description: "Meta description for the page"
-preloadImg: "/assets/images/logo-small.jpg"
 permalink: "about/"
+page:
+    title: "About Us"
 eleventyNavigation:
     key: About Us
     order: 2
 ---
 
 {% extends "layouts/base.html" %}
+{% import "components/optimized-image.html" as image with context %}
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/about.css" />
@@ -20,9 +22,84 @@ eleventyNavigation:
     <!-- ============================================ -->
 
     <section id="int-hero">
-        <h1 id="home-h">About Us</h1>
-        {% import "components/optimized-image.html" as image with context %}
-        {{ image.optimizedImage("Oregon.jpg", "Van", 2500, 1667, "eager", "100vw", "hero-background", "", "async") }}
+        <h1 id="home-h">{{ page.title }}</h1>
+        <picture>
+            <!--Mobile Image-->
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Oregon.jpg' | resize({ width: 640, height:472, position: 'attention'  }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Oregon.jpg' | resize({ width: 640, height:472, position: 'attention'  }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Oregon.jpg' | resize({ width: 640, height:472, position: 'attention'  }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <!--Tablet Image-->
+            <source
+                media="(max-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Oregon.jpg' | resize({ width:1246, height:472, position: 'attention'  }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(max-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Oregon.jpg' | resize({ width:1246, height:472, position: 'attention'  }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(max-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Oregon.jpg' | resize({ width:1246, height:472, position: 'attention'  }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <!--Desktop Image-->
+            <source
+                media="(min-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Oregon.jpg' | resize({ width:2500, height:1667, position: 'attention'  }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(min-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Oregon.jpg' | resize({ width:2500, height:1667, position: 'attention'  }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(min-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Oregon.jpg' | resize({ width:2500, height:1667, position: 'attention'  }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <img
+                src="{% getUrl '/assets/images/Oregon.jpg' | resize({ width:2500 , height:1667  }) | jpeg %}"
+                alt="RV in the woods"
+                width="2500"
+                height="1667"
+                loading="eager"
+                decoding="async"
+                aria-hidden="true"
+            />
+        </picture>
     </section>
 
     <!-- ============================================ -->
@@ -34,12 +111,118 @@ eleventyNavigation:
             <!-- Left Image Section -->
             <div class="cs-left">
                 <div class="cs-picture cs-picture1">
-                    {% import "components/optimized-image.html" as image with context %}
-                    {{ image.optimizedImage("desert.jpg", "Desert", 400, 563, "lazy", "(max-width: 600px) 100vw, 400px", "", "sbs-image") }}
+                    <picture>
+                        <!--Tablet Image-->
+                        <source
+                            media="(max-width: 1024px)"
+                            srcset="
+                                {% getUrl '/assets/images/desert.jpg' | resize({ width:730, height:812, position: 'attention'  }) | avif %}
+                            "
+                            type="image/avif"
+                        />
+                        <source
+                            media="(max-width: 1024px)"
+                            srcset="
+                                {% getUrl '/assets/images/desert.jpg' | resize({ width:730, height:812, position: 'attention'  }) | webp %}
+                            "
+                            type="image/webp"
+                        />
+                        <source
+                            media="(max-width: 1024px)"
+                            srcset="
+                                {% getUrl '/assets/images/desert.jpg' | resize({ width:730, height:812, position: 'attention'  }) | jpeg %}
+                            "
+                            type="image/jpeg"
+                        />
+                        <!--Desktop Image-->
+                        <source
+                            media="(min-width: 1024px)"
+                            srcset="
+                                {% getUrl '/assets/images/desert.jpg' | resize({ width:800, height:892, position: 'attention'  }) | avif %}
+                            "
+                            type="image/avif"
+                        />
+                        <source
+                            media="(min-width: 1024px)"
+                            srcset="
+                                {% getUrl '/assets/images/desert.jpg' | resize({ width:800, height:892, position: 'attention'  }) | webp %}
+                            "
+                            type="image/webp"
+                        />
+                        <source
+                            media="(min-width: 1024px)"
+                            srcset="
+                                {% getUrl '/assets/images/desert.jpg' | resize({ width:800, height:892, position: 'attention'  }) | jpeg %}
+                            "
+                            type="image/jpeg"
+                        />
+                        <img
+                            src="{% getUrl '/assets/images/desert.jpg' | resize({ width:800 , height:892  }) | jpeg %}"
+                            alt="RV in the woods"
+                            width="2500"
+                            height="1667"
+                            loading="eager"
+                            decoding="async"
+                            aria-hidden="true"
+                        />
+                    </picture>
                 </div>
                 <div class="cs-picture cs-picture2">
-                    {% import "components/optimized-image.html" as image with context %}
-                    {{ image.optimizedImage("France.jpg", "France", 400, 563, "lazy", "(max-width: 600px) 100vw, 400px", "", "sbs-image") }}
+                    <picture>
+                        <!--Tablet Image-->
+                        <source
+                            media="(max-width: 1024px)"
+                            srcset="
+                                {% getUrl '/assets/images/France.jpg' | resize({ width:546, height:528, position: 'attention'  }) | avif %}
+                            "
+                            type="image/avif"
+                        />
+                        <source
+                            media="(max-width: 1024px)"
+                            srcset="
+                                {% getUrl '/assets/images/France.jpg' | resize({ width:546, height:528, position: 'attention'  }) | webp %}
+                            "
+                            type="image/webp"
+                        />
+                        <source
+                            media="(max-width: 1024px)"
+                            srcset="
+                                {% getUrl '/assets/images/France.jpg' | resize({ width:546, height:528, position: 'attention'  }) | jpeg %}
+                            "
+                            type="image/jpeg"
+                        />
+                        <!--Desktop Image-->
+                        <source
+                            media="(min-width: 1024px)"
+                            srcset="
+                                {% getUrl '/assets/images/France.jpg' | resize({ width:600, height:580, position: 'attention'  }) | avif %}
+                            "
+                            type="image/avif"
+                        />
+                        <source
+                            media="(min-width: 1024px)"
+                            srcset="
+                                {% getUrl '/assets/images/France.jpg' | resize({ width:600, height:580, position: 'attention'  }) | webp %}
+                            "
+                            type="image/webp"
+                        />
+                        <source
+                            media="(min-width: 1024px)"
+                            srcset="
+                                {% getUrl '/assets/images/France.jpg' | resize({ width:600, height:580, position: 'attention'  }) | jpeg %}
+                            "
+                            type="image/jpeg"
+                        />
+                        <img
+                            src="{% getUrl '/assets/images/France.jpg' | resize({ width:600 , height:580  }) | jpeg %}"
+                            alt="RV in the woods"
+                            width="2500"
+                            height="1667"
+                            loading="eager"
+                            decoding="async"
+                            aria-hidden="true"
+                        />
+                    </picture>
                 </div>
             </div>
             <!-- Right Content Section-->
@@ -47,19 +230,22 @@ eleventyNavigation:
                 <span class="cs-topper">Expert RV Service</span>
                 <h2 class="cs-title">Your Trusted RV Maintenance Partner</h2>
                 <p class="cs-text">
-                    Zack provides comprehensive service for all types of recreational vehicles. 
-                    From routine maintenance to complex repairs, as a certified technician we ensure 
-                    your home on wheels stays in perfect condition.
+                    Zack provides comprehensive service for all types of
+                    recreational vehicles. From routine maintenance to complex
+                    repairs, as a certified technician we ensure your home on
+                    wheels stays in perfect condition.
                 </p>
                 <p class="cs-text">
-                    We specialize in everything from winterization and roof repair to slide out repair
-                    and interior comfort. We will come to you equipped to handle any RV service need, 
-                    and we pride ourselves on honest, reliable service you can trust.
+                    We specialize in everything from winterization and roof
+                    repair to slide out repair and interior comfort. We will
+                    come to you equipped to handle any RV service need, and we
+                    pride ourselves on honest, reliable service you can trust.
                 </p>
                 <div class="cs-flex-group">
                     <p class="cs-flex-p">
-                        "We treat every RV as if it were our own, providing meticulous attention to detail 
-                        and ensuring every system is working perfectly."
+                        "We treat every RV as if it were our own, providing
+                        meticulous attention to detail and ensuring every system
+                        is working perfectly."
                     </p>
                     <span class="cs-name">Zack</span>
                     <span class="cs-job">Owner</span>

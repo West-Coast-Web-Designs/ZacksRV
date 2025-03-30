@@ -21,8 +21,83 @@ eleventyNavigation:
 
     <section id="int-hero">
         <h1 id="home-h">Our Reviews</h1>
-        {% import "components/optimized-image.html" as image with context %}
-        {{ image.optimizedImage("Reviews.jpg", "Customer Reviews", 2500, 1667, "eager", "100vw", "hero-background", "hero-image", "async") }}
+        <picture>
+            <!--Mobile Image-->
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Reviews.jpg' | resize({ width: 640, height:472, position: 'attention'  }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Reviews.jpg' | resize({ width: 640, height:472, position: 'attention'  }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Reviews.jpg' | resize({ width: 640, height:472, position: 'attention'  }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <!--Tablet Image-->
+            <source
+                media="(max-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Reviews.jpg' | resize({ width:1246, height:472, position: 'attention'  }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(max-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Reviews.jpg' | resize({ width:1246, height:472, position: 'attention'  }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(max-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Reviews.jpg' | resize({ width:1246, height:472, position: 'attention'  }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <!--Desktop Image-->
+            <source
+                media="(min-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Reviews.jpg' | resize({ width:2500, height:1667, position: 'attention'  }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(min-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Reviews.jpg' | resize({ width:2500, height:1667, position: 'attention'  }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(min-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Reviews.jpg' | resize({ width:2500, height:1667, position: 'attention'  }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <img
+                src="{% getUrl '/assets/images/Reviews.jpg' | resize({ width:2500 , height:1667  }) | jpeg %}"
+                alt="RV in the woods"
+                width="2500"
+                height="1667"
+                loading="eager"
+                decoding="async"
+                aria-hidden="true"
+            />
+        </picture>
     </section>
 
     <!-- ============================================ -->
@@ -34,13 +109,18 @@ eleventyNavigation:
             <span class="cs-topper">Testimonials</span>
             <h2 class="cs-title">Trusted by Thousands of RV Owners</h2>
             <p class="cs-text">
-                At Zack's RV Repair, we help you solve problems so you can focus on enjoying your adventures. We support RV owners through every maintenance and repair need.
+                At Zack's RV Repair, we help you solve problems so you can focus
+                on enjoying your adventures. We support RV owners through every
+                maintenance and repair need.
             </p>
             <div class="cs-review-group">
                 <!-- Review 1 -->
                 <div class="cs-review">
                     <p class="cs-review-text">
-                        "Zacks's expertise with RV systems is incredible. He diagnosed and fixed our electrical issues quickly, and even showed us how to prevent future problems. Highly recommended!"
+                        "Zacks's expertise with RV systems is incredible. He
+                        diagnosed and fixed our electrical issues quickly, and
+                        even showed us how to prevent future problems. Highly
+                        recommended!"
                     </p>
                     <div class="cs-reviewer">
                         <span class="cs-name">Mike R.</span>
@@ -50,7 +130,9 @@ eleventyNavigation:
                 <!-- Review 2 -->
                 <div class="cs-review">
                     <p class="cs-review-text">
-                        "Best RV service we've found in years. Fair pricing, honest advice, and quality work. They treated our motorhome like their own."
+                        "Best RV service we've found in years. Fair pricing,
+                        honest advice, and quality work. They treated our
+                        motorhome like their own."
                     </p>
                     <div class="cs-reviewer">
                         <span class="cs-name">Sarah L.</span>
@@ -60,7 +142,9 @@ eleventyNavigation:
                 <!-- Review 3 -->
                 <div class="cs-review">
                     <p class="cs-review-text">
-                        "Emergency repair needed on our cross-country trip. Zack got us in right away and had us back on the road the same day. True professional!"
+                        "Emergency repair needed on our cross-country trip. Zack
+                        got us in right away and had us back on the road the
+                        same day. True professional!"
                     </p>
                     <div class="cs-reviewer">
                         <span class="cs-name">James W.</span>

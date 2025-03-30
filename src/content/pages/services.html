@@ -22,7 +22,6 @@ eleventyNavigation:
     Make sure the permalink is set to "false", which prevents a HTML file being made in /public and keeps this page from
     being written to the sitemap.
 #}
-
 {% extends "layouts/base.html" %}
 
 {% block head %}
@@ -36,8 +35,83 @@ eleventyNavigation:
 
     <section id="int-hero">
         <h1 id="home-h">RV Services</h1>
-        {% import "components/optimized-image.html" as image with context %}
-        {{ image.optimizedImage("Services.jpg", "RV Services", 2500, 1667, "eager", "100vw", "hero-background", "hero-image", "async") }}
+        <picture>
+            <!--Mobile Image-->
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Services.jpg' | resize({ width: 640, height:472, position: 'attention'  }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Services.jpg' | resize({ width: 640, height:472, position: 'attention'  }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/Services.jpg' | resize({ width: 640, height:472, position: 'attention'  }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <!--Tablet Image-->
+            <source
+                media="(max-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Services.jpg' | resize({ width:1246, height:472, position: 'attention'  }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(max-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Services.jpg' | resize({ width:1246, height:472, position: 'attention'  }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(max-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Services.jpg' | resize({ width:1246, height:472, position: 'attention'  }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <!--Desktop Image-->
+            <source
+                media="(min-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Services.jpg' | resize({ width:2500, height:1667, position: 'attention'  }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(min-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Services.jpg' | resize({ width:2500, height:1667, position: 'attention'  }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(min-width: 1024px)"
+                srcset="
+                    {% getUrl '/assets/images/Services.jpg' | resize({ width:2500, height:1667, position: 'attention'  }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <img
+                src="{% getUrl '/assets/images/Services.jpg' | resize({ width:2500 , height:1667  }) | jpeg %}"
+                alt="RV in the woods"
+                width="2500"
+                height="1667"
+                loading="eager"
+                decoding="async"
+                aria-hidden="true"
+            />
+        </picture>
     </section>
 
     <!-- ============================================ -->
@@ -48,105 +122,195 @@ eleventyNavigation:
         <div class="cs-container">
             <div class="cs-content">
                 <span class="cs-topper">Our Services</span>
-                <h2 class="cs-title">Expert RV Repair & Maintenance Services</h2>
+                <h2 class="cs-title">
+                    Expert RV Repair & Maintenance Services
+                </h2>
                 <p class="cs-text">
-                    From routine maintenance to emergency repairs, our certified technicians provide comprehensive RV care to keep your vehicle in top condition.
+                    From routine maintenance to emergency repairs, our certified
+                    technicians provide comprehensive RV care to keep your
+                    vehicle in top condition.
                 </p>
             </div>
             <ul class="cs-card-group">
                 <li class="cs-item">
                     <div class="cs-item-content">
                         <picture class="cs-picture">
-                            <img class="cs-icon"
+                            <img
+                                class="cs-icon"
                                 src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/engineering%201%20red.svg"
-                                loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                                loading="lazy"
+                                decoding="async"
+                                alt="icon"
+                                width="33"
+                                height="38"
+                                aria-hidden="true"
+                            />
                         </picture>
                         <div class="cs-text-group">
-                            <h3 class="cs-h3">General Service, Repair and Replacement</h3>
-                            <p class="cs-item-text">We offer services, repairs and replacements of applicances and systems, billed at the hourly service rates</p>
+                            <h3 class="cs-h3">
+                                General Service, Repair and Replacement
+                            </h3>
+                            <p class="cs-item-text">
+                                We offer services, repairs and replacements of
+                                applicances and systems, billed at the hourly
+                                service rates
+                            </p>
                         </div>
                     </div>
                     <div class="cs-item-overlay">
-                        <a href="/contact" class="cs-button-solid">Schedule Service</a>
+                        <a href="/contact" class="cs-button-solid"
+                            >Schedule Service</a
+                        >
                     </div>
                 </li>
                 <li class="cs-item">
                     <div class="cs-item-content">
                         <picture class="cs-picture">
-                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/brake-red.svg"
-                                loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                            <img
+                                class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/brake-red.svg"
+                                loading="lazy"
+                                decoding="async"
+                                alt="icon"
+                                width="33"
+                                height="38"
+                                aria-hidden="true"
+                            />
                         </picture>
                         <div class="cs-text-group">
                             <h3 class="cs-h3">Slide-Out Maintenance</h3>
-                            <p class="cs-item-text">Regular slide-out maintenance helps prevent wear and ensures smooth operation. Service includes lubricating tracks and gears, treating rubber seals and wipers, and inspecting alignment, toppers, and seals. Recommended annually.</p>
+                            <p class="cs-item-text">
+                                Regular slide-out maintenance helps prevent wear
+                                and ensures smooth operation. Service includes
+                                lubricating tracks and gears, treating rubber
+                                seals and wipers, and inspecting alignment,
+                                toppers, and seals. Recommended annually.
+                            </p>
                         </div>
                     </div>
                     <div class="cs-item-overlay">
-                        <a href="/contact" class="cs-button-solid">Schedule Service</a>
+                        <a href="/contact" class="cs-button-solid"
+                            >Schedule Service</a
+                        >
                     </div>
                 </li>
                 <li class="cs-item">
                     <div class="cs-item-content">
                         <picture class="cs-picture">
-                            <img class="cs-icon"
+                            <img
+                                class="cs-icon"
                                 src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/air-conditioner-red.svg"
-                                loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                                loading="lazy"
+                                decoding="async"
+                                alt="icon"
+                                width="33"
+                                height="38"
+                                aria-hidden="true"
+                            />
                         </picture>
                         <div class="cs-text-group">
                             <h3 class="cs-h3">Appliance Services</h3>
-                            <p class="cs-item-text">Expert climate control system maintenance and repairs for year-round comfort.We service and repair essential RV appliances to ensure they run efficiently, including refrigerators, water heaters and furnaces.</p>
+                            <p class="cs-item-text">
+                                Expert climate control system maintenance and
+                                repairs for year-round comfort.We service and
+                                repair essential RV appliances to ensure they
+                                run efficiently, including refrigerators, water
+                                heaters and furnaces.
+                            </p>
                         </div>
                     </div>
                     <div class="cs-item-overlay">
-                        <a href="/contact" class="cs-button-solid">Schedule Service</a>
+                        <a href="/contact" class="cs-button-solid"
+                            >Schedule Service</a
+                        >
                     </div>
                 </li>
                 <li class="cs-item">
                     <div class="cs-item-content">
                         <picture class="cs-picture">
-                            <img class="cs-icon"
-                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/motor%201%20red.svg" loading="lazy"
-                                decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                            <img
+                                class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/motor%201%20red.svg"
+                                loading="lazy"
+                                decoding="async"
+                                alt="icon"
+                                width="33"
+                                height="38"
+                                aria-hidden="true"
+                            />
                         </picture>
                         <div class="cs-text-group">
                             <h3 class="cs-h3">Winterization</h3>
-                            <p class="cs-item-text">Drains fresh water tank and water heater, clears lines with compressed air, fills P-traps with antifreeze, and pumps antifreeze through the system (includes up to 2 gallons).</p>
+                            <p class="cs-item-text">
+                                Drains fresh water tank and water heater, clears
+                                lines with compressed air, fills P-traps with
+                                antifreeze, and pumps antifreeze through the
+                                system (includes up to 2 gallons).
+                            </p>
                         </div>
                     </div>
                     <div class="cs-item-overlay">
-                        <a href="/contact" class="cs-button-solid">Schedule Service</a>
+                        <a href="/contact" class="cs-button-solid"
+                            >Schedule Service</a
+                        >
                     </div>
                 </li>
                 <li class="cs-item">
                     <div class="cs-item-content">
                         <picture class="cs-picture">
-                            <img class="cs-icon"
-                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/alloy-wheel-red.svg" loading="lazy"
-                                decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                            <img
+                                class="cs-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/alloy-wheel-red.svg"
+                                loading="lazy"
+                                decoding="async"
+                                alt="icon"
+                                width="33"
+                                height="38"
+                                aria-hidden="true"
+                            />
                         </picture>
                         <div class="cs-text-group">
                             <h3 class="cs-h3">Inspections and Orientations</h3>
-                            <p class="cs-item-text">Ensure your RV is safe and fully operational with these essential services. Walkthrough of exterior and interior features, dashboard functions, and leveling systems.</p>
+                            <p class="cs-item-text">
+                                Ensure your RV is safe and fully operational
+                                with these essential services. Walkthrough of
+                                exterior and interior features, dashboard
+                                functions, and leveling systems.
+                            </p>
                         </div>
                     </div>
                     <div class="cs-item-overlay">
-                        <a href="/contact" class="cs-button-solid">Schedule Service</a>
+                        <a href="/contact" class="cs-button-solid"
+                            >Schedule Service</a
+                        >
                     </div>
                 </li>
                 <li class="cs-item">
                     <div class="cs-item-content">
                         <picture class="cs-picture">
-                            <img class="cs-icon"
+                            <img
+                                class="cs-icon"
                                 src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/contamination-red.svg"
-                                loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
+                                loading="lazy"
+                                decoding="async"
+                                alt="icon"
+                                width="33"
+                                height="38"
+                                aria-hidden="true"
+                            />
                         </picture>
                         <div class="cs-text-group">
                             <h3 class="cs-h3">Electrical Systems</h3>
-                            <p class="cs-item-text">Comprehensive electrical system diagnostics and repairs for RV components.</p>
+                            <p class="cs-item-text">
+                                Comprehensive electrical system diagnostics and
+                                repairs for RV components.
+                            </p>
                         </div>
                     </div>
                     <div class="cs-item-overlay">
-                        <a href="/contact" class="cs-button-solid">Schedule Service</a>
+                        <a href="/contact" class="cs-button-solid"
+                            >Schedule Service</a
+                        >
                     </div>
                 </li>
             </ul>
